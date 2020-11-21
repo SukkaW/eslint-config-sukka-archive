@@ -182,7 +182,7 @@ module.exports = {
     ],
     'prefer-const': ['error', { ignoreReadBeforeAssign: true }],
     'prefer-numeric-literals': 'error',
-    'prefer-reflect': 'warn',
+    'prefer-reflect': 'off',
     'prefer-rest-params': 'error',
     'prefer-template': 'warn',
     'rest-spread-spacing': 'error',
