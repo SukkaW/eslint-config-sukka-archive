@@ -1,0 +1,39 @@
+{
+  "name": "eslint-config-sukka",
+  "version": "1.0.2",
+  "description": "ESLint config for Sukka projects",
+  "files": [
+    "rules",
+    "node.js",
+    "legacy.js",
+    "typescript.js"
+  ],
+  "dependencies": {
+    "eslint-plugin-node": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0"
+  },
+  "scripts": {
+    "test": "eslint . -c test/index.js",
+    "lint": "eslint . --fix -c node.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SukkaW/eslint-config-sukka.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "sukka"
+  ],
+  "author": "Sukka <https://skk.moe>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SukkaW/eslint-config-sukka/issues"
+  },
+  "homepage": "https://github.com/SukkaW/eslint-config-sukka#readme",
+  "engines": {
+    "node": ">= 8.3.0"
+  }
+}
