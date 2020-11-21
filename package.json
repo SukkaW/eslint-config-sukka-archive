@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sukka",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ESLint config for Sukka projects",
   "files": [
     "rules",
@@ -12,11 +12,18 @@
     "eslint-plugin-node": "^11.1.0"
   },
   "devDependencies": {
-    "eslint": "^7.14.0"
+    "@types/node": "^14.14.9",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "chalk": "^4.1.0",
+    "eslint": "^7.14.0",
+    "prettier": "^2.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2"
   },
   "scripts": {
     "test": "eslint . -c test/index.js",
-    "lint": "eslint . --fix -c node.js"
+    "lint": "eslint . --fix -c node.js",
+    "build": "ts-node --files --transpile-only tools/generate-ts-config.ts"
   },
   "repository": {
     "type": "git",
