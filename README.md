@@ -11,7 +11,7 @@ ESLint config for [Sukka](https://skk.moe).
 $ npm i -D eslint-config-sukka
 ```
 
-If you are using eslint-config-hexo for TypeScript project, install following packages as well:
+If you are using eslint-config-sukka for TypeScript project, install following packages as well:
 
 ```bash
 $ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
