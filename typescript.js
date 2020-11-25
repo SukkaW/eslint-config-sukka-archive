@@ -284,7 +284,7 @@ module.exports = {
     'wrap-regex': 'off',
     'no-label-var': 'error',
     'no-use-before-define': 'off',
-    '@typescript-eslint/default-param-last': 'error',
+    '@typescript-eslint/default-param-last': 'off',
     '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
     '@typescript-eslint/no-implied-eval': 'error',
     '@typescript-eslint/no-invalid-this': 'off',
