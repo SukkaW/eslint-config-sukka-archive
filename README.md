@@ -11,17 +11,15 @@ ESLint config for [Sukka](https://skk.moe).
 $ npm i -D eslint-config-sukka
 ```
 
-If you are using eslint-config-sukka for TypeScript project, install following packages as well:
-
-```bash
-$ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
-```
-
 ## Usage
 
 Add following snippets to your ESLint configuration files.
 
-### Node.js project
+### Node.js Project
+
+```bash
+$ npm i -D eslint-plugin-node
+```
 
 ```json
 {
@@ -38,6 +36,10 @@ Add following snippets to your ESLint configuration files.
 ```
 
 ### TypeScript Project
+
+```bash
+$ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
 
 ```json
 {
