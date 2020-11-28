@@ -284,6 +284,15 @@ module.exports = {
     'wrap-regex': 'off',
     'no-label-var': 'error',
     'no-use-before-define': 'off',
+    '@typescript-eslint/naming-convention': [
+      'warn',
+      {
+        selector: 'variable',
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE']
+      },
+      { selector: 'function', format: ['camelCase', 'PascalCase'] },
+      { selector: 'typeLike', format: ['PascalCase'] }
+    ],
     '@typescript-eslint/default-param-last': 'off',
     '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
     '@typescript-eslint/no-implied-eval': 'error',
@@ -349,15 +358,6 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': [
       'error',
       { functions: false, classes: true, variables: true }
-    ],
-    '@typescript-eslint/naming-convention': [
-      'warn',
-      {
-        selector: 'variable',
-        format: ['camelCase', 'PascalCase', 'UPPER_CASE']
-      },
-      { selector: 'function', format: ['camelCase', 'PascalCase'] },
-      { selector: 'typeLike', format: ['PascalCase'] }
     ]
   }
 };

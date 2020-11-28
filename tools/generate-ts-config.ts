@@ -5,15 +5,15 @@ import { Linter } from 'eslint';
 import { format, resolveConfig } from 'prettier';
 import * as eslintConfigSukka from '../node';
 
-import { rules as eslintRecommendedRules } from 'eslint/conf/eslint-recommended';
 import typescriptESLintBuiltinRules from '@typescript-eslint/eslint-plugin/dist/rules';
 import { overrides as typescriptESLintBuiltinOverrides } from '@typescript-eslint/eslint-plugin/dist/configs/eslint-recommended';
 
 import * as sukkaBestPracticesRules from '../rules/best-practices';
-import * as sukkaErrorRules from '../rules/error'
-import * as sukkaEs6Rules from '../rules/es6'
-import * as sukkaStyleRules from '../rules/style'
-import * as sukkaVariablesRules from '../rules/variables'
+import * as sukkaErrorRules from '../rules/error';
+import * as sukkaEs6Rules from '../rules/es6';
+import * as sukkaStyleRules from '../rules/style';
+import * as sukkaVariablesRules from '../rules/variables';
+import * as sukkaTypeScriptRules from '../rules/typescript';
 
 interface LinterConfigRules {
   [name: string]: any
@@ -27,10 +27,11 @@ const SUKKA_RULES_ENTRIES = new Map(Object.entries({
   ...sukkaErrorRules,
   ...sukkaEs6Rules,
   ...sukkaStyleRules,
-  ...sukkaVariablesRules
+  ...sukkaVariablesRules,
+  ...sukkaTypeScriptRules
 }));
 
-const RULE_NAME_PREFIX = '@typescript-eslint/';
+const TS_ESLINT_RULE_NAME_PREFIX = '@typescript-eslint/';
 
 const ESLINT_BASE_RULES_TO_BE_OVERRIDDEN = new Map(
   Object.entries(typescriptESLintBuiltinRules)
@@ -63,7 +64,8 @@ const generatedTsConfigRules: LinterConfigRules = {
   ...sukkaErrorRules,
   ...sukkaEs6Rules,
   ...sukkaStyleRules,
-  ...sukkaVariablesRules
+  ...sukkaVariablesRules,
+  ...sukkaTypeScriptRules
 };
 
 console.log('========== generate typescript.js ==========')
@@ -73,32 +75,13 @@ SUKKA_RULES_ENTRIES.forEach((ruleConfig, ruleName) => {
     console.log(`${chalk.yellow('eslint:recommended')} ${chalk.green(ruleName)} needs to be overridden by ${chalk.yellow('plugin:@typescript-eslint/recommended')}`);
 
     generatedTsConfigRules[ruleName] = 'off';
-    generatedTsConfigRules[`${RULE_NAME_PREFIX}${ruleName}`] = ruleConfig;
+    generatedTsConfigRules[`${TS_ESLINT_RULE_NAME_PREFIX}${ruleName}`] = ruleConfig;
   }
 });
 
 // Handle "camelcase" seperatelly
-console.log(`${chalk.yellow('eslint:recommended')} ${chalk.green('camelcase')} needs to be overridden mannually`);
-
+console.log(`${chalk.yellow('eslint:recommended')} ${chalk.green('camelcase')} needs to be turn off mannually`);
 generatedTsConfigRules.camelcase = 'off';
-generatedTsConfigRules['@typescript-eslint/naming-convention'] = [
-  'warn',
-  // Allow camelCase variables (23.2), PascalCase variables (23.8), and UPPER_CASE variables (23.10)
-  {
-    selector: 'variable',
-    format: ['camelCase', 'PascalCase', 'UPPER_CASE']
-  },
-  // Allow camelCase functions (23.2), and PascalCase functions (23.8)
-  {
-    selector: 'function',
-    format: ['camelCase', 'PascalCase']
-  },
-  // Airbnb recommends PascalCase for classes (23.3), and although Airbnb does not make TypeScript recommendations, we are assuming this rule would similarly apply to anything "type like", including interfaces, type aliases, and enums
-  {
-    selector: 'typeLike',
-    format: ['PascalCase']
-  }
-];
 
 writeConfig({
   ...BASE_TS_CONFIG,
