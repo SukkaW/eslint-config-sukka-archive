@@ -3,37 +3,6 @@
 // YOU CAN REGENERATE IT USING npm run build
 
 module.exports = {
-  plugins: ['@typescript-eslint'],
-  parser: '@typescript-eslint/parser',
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {
-        'constructor-super': 'off',
-        'getter-return': 'off',
-        'no-const-assign': 'off',
-        'no-dupe-args': 'off',
-        'no-dupe-class-members': 'off',
-        'no-dupe-keys': 'off',
-        'no-func-assign': 'off',
-        'no-import-assign': 'off',
-        'no-new-symbol': 'off',
-        'no-obj-calls': 'off',
-        'no-redeclare': 'off',
-        'no-setter-return': 'off',
-        'no-this-before-super': 'off',
-        'no-undef': 'off',
-        'no-unreachable': 'off',
-        'no-unsafe-negation': 'off',
-        'no-var': 'error',
-        'prefer-const': 'error',
-        'prefer-rest-params': 'error',
-        'prefer-spread': 'error',
-        'valid-typeof': 'off'
-      }
-    }
-  ],
   rules: {
     'accessor-pairs': 'off',
     'array-callback-return': ['error', { allowImplicit: true }],
@@ -359,5 +328,36 @@ module.exports = {
       'error',
       { functions: false, classes: true, variables: true }
     ]
-  }
+  },
+  plugins: ['@typescript-eslint'],
+  parser: '@typescript-eslint/parser',
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'constructor-super': 'off',
+        'getter-return': 'off',
+        'no-const-assign': 'off',
+        'no-dupe-args': 'off',
+        'no-dupe-class-members': 'off',
+        'no-dupe-keys': 'off',
+        'no-func-assign': 'off',
+        'no-import-assign': 'off',
+        'no-new-symbol': 'off',
+        'no-obj-calls': 'off',
+        'no-redeclare': 'off',
+        'no-setter-return': 'off',
+        'no-this-before-super': 'off',
+        'no-undef': 'off',
+        'no-unreachable': 'off',
+        'no-unsafe-negation': 'off',
+        'no-var': 'error',
+        'prefer-const': 'error',
+        'prefer-rest-params': 'error',
+        'prefer-spread': 'error',
+        'valid-typeof': 'off'
+      }
+    }
+  ]
 };
