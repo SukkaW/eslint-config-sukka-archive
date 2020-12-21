@@ -327,7 +327,8 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': [
       'error',
       { functions: false, classes: true, variables: true }
-    ]
+    ],
+    '@typescript-eslint/no-namespace': 'off'
   },
   plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',

@@ -130,6 +130,21 @@ Object.entries(generatedTsConfigRules).forEach(([ruleName, ruleConfig]) => {
   }
 });
 
+console.log(
+  'no-namespace'
+    .padStart(TS_ESLINT_RULE_NAME_PREFIX.length + 'no-namespace'.length)
+    .padEnd(TS_ESLINT_RULE_NAME_PREFIX.length + MAX_RULE_NAME_LENGTH),
+  '=',
+  chalk.green(typescriptESLintBuiltinRules['no-namespace'])
+);
+
+console.log(
+  `${chalk.dim(TS_ESLINT_RULE_NAME_PREFIX)}${'no-namespace'.padEnd(MAX_RULE_NAME_LENGTH)}`,
+  '=',
+  chalk.red('off')
+);
+generatedTsConfigRules[`${TS_ESLINT_RULE_NAME_PREFIX}no-namespace`] = 'off';
+
 writeConfig(
   deepmerge(
     {
