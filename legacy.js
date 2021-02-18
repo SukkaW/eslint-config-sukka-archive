@@ -238,7 +238,11 @@ module.exports = {
       }
     ],
     'linebreak-style': 'error',
-    'lines-between-class-members': ['error', 'always'],
+    'lines-between-class-members': [
+      'error',
+      'always',
+      { exceptAfterSingleLine: true }
+    ],
     'new-cap': [
       'error',
       {

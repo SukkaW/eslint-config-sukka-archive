@@ -83,7 +83,7 @@ module.exports = {
   }],
 
   'linebreak-style': 'error',
-  'lines-between-class-members': ['error', 'always'],
+  'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
 
   // require a capital letter for constructors
   'new-cap': ['error', {

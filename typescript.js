@@ -315,7 +315,11 @@ module.exports = {
         }
       }
     ],
-    '@typescript-eslint/lines-between-class-members': ['error', 'always'],
+    '@typescript-eslint/lines-between-class-members': [
+      'error',
+      'always',
+      { exceptAfterSingleLine: true }
+    ],
     '@typescript-eslint/no-array-constructor': 'error',
     '@typescript-eslint/quotes': ['error', 'single'],
     '@typescript-eslint/semi': ['error', 'always'],
