@@ -11,7 +11,7 @@ module.exports = {
     curly: ['error', 'multi-line'],
     'default-case': ['error', { commentPattern: '^no default$' }],
     'default-case-last': 'error',
-    'default-param-last': 'off',
+    'default-param-last': 'error',
     'dot-notation': ['error', { allowKeywords: true }],
     'dot-location': ['error', 'property'],
     eqeqeq: ['error', 'always', { null: 'ignore' }],
@@ -116,7 +116,7 @@ module.exports = {
     'no-void': 'error',
     'no-with': 'error',
     'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
-    'prefer-regex-literals': 'error',
+    'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
     radix: 'error',
     'require-await': 'off',
     'require-unicode-regexp': 'off',
@@ -139,8 +139,10 @@ module.exports = {
       }
     ],
     'no-loss-of-precision': 'warn',
-    'no-unreachable-loop': ['off', { ignore: [] }],
+    'no-promise-executor-return': 'error',
+    'no-unreachable-loop': ['error', { ignore: [] }],
     'no-unused-vars': ['error', { args: 'none' }],
+    'no-unused-private-class-members': 'error',
     'no-useless-backreference': 'error',
     'no-negated-in-lhs': 'off',
     'require-atomic-updates': 'off',
@@ -151,6 +153,10 @@ module.exports = {
     'generator-star-spacing': ['error', { before: false, after: true }],
     'no-confusing-arrow': ['error', { allowParens: true }],
     'no-duplicate-imports': 'off',
+    'no-restricted-exports': [
+      'error',
+      { restrictedNamedExports: ['default', 'then'] }
+    ],
     'no-useless-constructor': 'error',
     'no-useless-rename': [
       'error',
@@ -306,7 +312,11 @@ module.exports = {
       { ignoreModuleItems: ['url.parse', 'url.resolve'] }
     ]
   },
-  extends: ['eslint:recommended', 'plugin:node/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:node/recommended',
+    'plugin:import/recommended'
+  ],
   plugins: ['node'],
   env: { node: true, es6: true }
 };

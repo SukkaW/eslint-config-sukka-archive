@@ -109,7 +109,7 @@ module.exports = {
     'no-void': 'error',
     'no-with': 'error',
     'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
-    'prefer-regex-literals': 'error',
+    'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
     radix: 'error',
     'require-await': 'off',
     'require-unicode-regexp': 'off',
@@ -122,8 +122,10 @@ module.exports = {
     'no-empty': ['error', { allowEmptyCatch: true }],
     'no-extra-parens': 'off',
     'no-loss-of-precision': 'off',
-    'no-unreachable-loop': ['off', { ignore: [] }],
+    'no-promise-executor-return': 'error',
+    'no-unreachable-loop': ['error', { ignore: [] }],
     'no-unused-vars': 'off',
+    'no-unused-private-class-members': 'error',
     'no-useless-backreference': 'error',
     'no-negated-in-lhs': 'off',
     'require-atomic-updates': 'off',
@@ -134,6 +136,10 @@ module.exports = {
     'generator-star-spacing': ['error', { before: false, after: true }],
     'no-confusing-arrow': ['error', { allowParens: true }],
     'no-duplicate-imports': 'off',
+    'no-restricted-exports': [
+      'error',
+      { restrictedNamedExports: ['default', 'then'] }
+    ],
     'no-useless-constructor': 'off',
     'no-useless-rename': [
       'error',
@@ -262,7 +268,11 @@ module.exports = {
       { selector: 'function', format: ['camelCase', 'PascalCase'] },
       { selector: 'typeLike', format: ['PascalCase'] }
     ],
-    '@typescript-eslint/default-param-last': 'off',
+    '@typescript-eslint/consistent-type-assertions': [
+      'error',
+      { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow' }
+    ],
+    '@typescript-eslint/default-param-last': 'error',
     '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
     '@typescript-eslint/no-implied-eval': 'error',
     '@typescript-eslint/no-invalid-this': 'off',
@@ -336,7 +346,12 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript'
+  ],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
