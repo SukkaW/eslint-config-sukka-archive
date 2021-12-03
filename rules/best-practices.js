@@ -1,5 +1,6 @@
 module.exports = {
   // enforces getter/setter pairs in objects
+  // https://eslint.org/docs/rules/accessor-pairs
   'accessor-pairs': 'off',
 
   // enforces return statements in callbacks of array's methods
@@ -7,6 +8,7 @@ module.exports = {
   'array-callback-return': ['error', { allowImplicit: true }],
 
   // treat var statements as if they were block scoped
+  // https://eslint.org/docs/rules/block-scoped-var
   'block-scoped-var': 'error',
 
   // enforce that class methods use "this"
@@ -16,18 +18,21 @@ module.exports = {
   }],
 
   // specify curly brace conventions for all control statements
+  // https://eslint.org/docs/rules/curly
   curly: ['error', 'multi-line'], // multiline
 
   // require default case in switch statements
+  // https://eslint.org/docs/rules/default-case
   'default-case': ['error', { commentPattern: '^no default$' }],
 
   // Enforce default clauses in switch statements to be last
   'default-case-last': 'error',
 
   // https://eslint.org/docs/rules/default-param-last
-  'default-param-last': 'off',
+  'default-param-last': 'error',
 
   // encourages use of dot notation whenever possible
+  // https://eslint.org/docs/rules/dot-notation
   'dot-notation': ['error', { allowKeywords: true }],
 
   // enforces consistent newlines before or after dots
@@ -40,13 +45,14 @@ module.exports = {
 
   // Require grouped accessor pairs in object literals and classes
   // https://eslint.org/docs/rules/grouped-accessor-pairs
-  // TODO: enable in next major, altho the guide forbids getters/setters anyways
   'grouped-accessor-pairs': 'error',
 
   // make sure for-in loops have an if statement
+  // https://eslint.org/docs/rules/guard-for-in
   'guard-for-in': 'error',
 
   // disallow the use of alert, confirm, and prompt
+  // https://eslint.org/docs/rules/no-alert
   'no-alert': 'warn',
 
   // disallow use of arguments.caller or arguments.callee
@@ -65,12 +71,15 @@ module.exports = {
   'no-empty-pattern': 'error',
 
   // disallow use of eval()
+  // https://eslint.org/docs/rules/no-eval
   'no-eval': 'error',
 
   // disallow adding to native types
+  // https://eslint.org/docs/rules/no-extend-native
   'no-extend-native': 'error',
 
   // disallow unnecessary function binding
+  // https://eslint.org/docs/rules/no-extra-bind
   'no-extra-bind': 'error',
 
   // disallow Unnecessary Labels
@@ -134,45 +143,57 @@ module.exports = {
 
   // disallow certain object properties
   // https://eslint.org/docs/rules/no-restricted-properties
-  'no-restricted-properties': ['error', {
-    object: 'arguments',
-    property: 'callee',
-    message: 'arguments.callee is deprecated'
-  }, {
-    object: 'global',
-    property: 'isFinite',
-    message: 'Please use Number.isFinite instead'
-  }, {
-    object: 'self',
-    property: 'isFinite',
-    message: 'Please use Number.isFinite instead'
-  }, {
-    object: 'window',
-    property: 'isFinite',
-    message: 'Please use Number.isFinite instead'
-  }, {
-    object: 'global',
-    property: 'isNaN',
-    message: 'Please use Number.isNaN instead'
-  }, {
-    object: 'self',
-    property: 'isNaN',
-    message: 'Please use Number.isNaN instead'
-  }, {
-    object: 'window',
-    property: 'isNaN',
-    message: 'Please use Number.isNaN instead'
-  }, {
-    property: '__defineGetter__',
-    message: 'Please use Object.defineProperty instead.'
-  }, {
-    property: '__defineSetter__',
-    message: 'Please use Object.defineProperty instead.'
-  }, {
-    object: 'Math',
-    property: 'pow',
-    message: 'Use the exponentiation operator (**) instead.'
-  }],
+  'no-restricted-properties': [
+    'error',
+    {
+      object: 'arguments',
+      property: 'callee',
+      message: 'arguments.callee is deprecated'
+    },
+    {
+      object: 'global',
+      property: 'isFinite',
+      message: 'Please use Number.isFinite instead'
+    },
+    {
+      object: 'self',
+      property: 'isFinite',
+      message: 'Please use Number.isFinite instead'
+    },
+    {
+      object: 'window',
+      property: 'isFinite',
+      message: 'Please use Number.isFinite instead'
+    },
+    {
+      object: 'global',
+      property: 'isNaN',
+      message: 'Please use Number.isNaN instead'
+    },
+    {
+      object: 'self',
+      property: 'isNaN',
+      message: 'Please use Number.isNaN instead'
+    },
+    {
+      object: 'window',
+      property: 'isNaN',
+      message: 'Please use Number.isNaN instead'
+    },
+    {
+      property: '__defineGetter__',
+      message: 'Please use Object.defineProperty instead.'
+    },
+    {
+      property: '__defineSetter__',
+      message: 'Please use Object.defineProperty instead.'
+    },
+    {
+      object: 'Math',
+      property: 'pow',
+      message: 'Use the exponentiation operator (**) instead.'
+    }
+  ],
 
   // disallow use of assignment in return statement
   'no-return-assign': ['error', 'always'],
@@ -227,7 +248,9 @@ module.exports = {
   'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
 
   // https://eslint.org/docs/rules/prefer-regex-literals
-  'prefer-regex-literals': 'error',
+  'prefer-regex-literals': ['error', {
+    disallowRedundantWrapping: true
+  }],
 
   // require use of the second argument for parseInt()
   'radix': 'error',

@@ -25,14 +25,21 @@ module.exports = {
   // https://eslint.org/docs/rules/no-loss-of-precision
   'no-loss-of-precision': 'warn',
 
+  // Disallow returning values from Promise executor functions
+  // https://eslint.org/docs/rules/no-promise-executor-return
+  'no-promise-executor-return': 'error',
+
   // Disallow loops with a body that allows only one iteration
   // https://eslint.org/docs/rules/no-unreachable-loop
-  // TODO: enable, semver-minor, once eslint v7.3 is required (which is major)
-  'no-unreachable-loop': ['off', {
+  'no-unreachable-loop': ['error', {
     ignore: [] // WhileStatement, DoWhileStatement, ForStatement, ForInStatement, ForOfStatement
   }],
 
   'no-unused-vars': ['error', { args: 'none' }],
+
+  // Disallow Unused Private Class Members
+  // https://eslint.org/docs/rules/no-unused-private-class-members
+  'no-unused-private-class-members': 'error',
 
   // Disallow useless backreferences in regular expressions
   // https://eslint.org/docs/rules/no-useless-backreference

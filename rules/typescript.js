@@ -16,5 +16,9 @@ module.exports = {
       selector: 'typeLike',
       format: ['PascalCase']
     }
+  ],
+  '@typescript-eslint/consistent-type-assertions': [
+    'error',
+    { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow' }
   ]
 };
