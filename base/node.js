@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:node/recommended'],
+  extends: ['eslint:recommended', 'plugin:node/recommended', 'plugin:import/recommended'],
   plugins: ['node'],
   rules: {
     // Strict Mode

@@ -18,7 +18,7 @@ Add following snippets to your ESLint configuration files.
 ### Node.js Project
 
 ```bash
-$ npm i -D eslint-plugin-node
+$ npm i -D eslint-plugin-node eslint-plugin-import
 ```
 
 ```json
@@ -38,7 +38,7 @@ $ npm i -D eslint-plugin-node
 ### TypeScript Project
 
 ```bash
-$ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+$ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-import
 ```
 
 ```json
