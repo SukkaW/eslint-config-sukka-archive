@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 /* utility */
-const chalk = require('chalk');
+const chalk = require('picocolors');
 const { writeFileSync } = require('fs');
 const { Linter } = require('eslint');
 const { format, resolveConfig } = require('prettier');
