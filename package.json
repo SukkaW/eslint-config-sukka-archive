@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sukka",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "ESLint config for Sukka projects",
   "files": [
     "rules",
@@ -20,7 +20,8 @@
   "scripts": {
     "test": "eslint . -c test/index.js",
     "lint": "eslint . --fix",
-    "build": "node tools/generate-config.js"
+    "build": "node tools/generate-config.js",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",

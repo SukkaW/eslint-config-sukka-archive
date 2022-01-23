@@ -109,6 +109,7 @@ module.exports = {
     'no-void': 'error',
     'no-with': 'error',
     'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
+    'prefer-object-has-own': 'error',
     'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
     radix: 'error',
     'require-await': 'off',
