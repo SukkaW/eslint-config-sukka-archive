@@ -38,7 +38,7 @@ $ npm i -D eslint-plugin-node eslint-plugin-import
 ### TypeScript Project
 
 ```bash
-$ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-import
+$ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-import eslint-import-resolver-typescript
 ```
 
 ```json

@@ -66,7 +66,7 @@ module.exports = {
   // https://eslint.org/docs/rules/implicit-arrow-linebreak
   'implicit-arrow-linebreak': ['error', 'beside'],
 
-  'indent': ['error', 2, { SwitchCase: 1 }],
+  indent: ['error', 2, { SwitchCase: 1 }],
 
   // enforces spacing between keys and values in object literal properties
   'key-spacing': ['error', { beforeColon: false, afterColon: true }],
@@ -138,7 +138,13 @@ module.exports = {
   'prefer-exponentiation-operator': 'error',
 
   'operator-linebreak': ['error', 'before'],
-  'quotes': ['error', 'single'],
+  quotes: ['error', 'single'],
+
+  // require quotes around object literal property names
+  // https://eslint.org/docs/rules/quote-props.html
+  'quote-props': ['error', 'as-needed', { keywords: false, unnecessary: true, numbers: false }],
+
+  'jsx-quotes': ['off', 'prefer-double'],
 
   // require or disallow use of semicolons instead of ASI
   semi: ['error', 'always'],

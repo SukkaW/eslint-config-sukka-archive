@@ -9,7 +9,7 @@ module.exports = {
   // disallow use of constant expressions in conditions
   'no-constant-condition': 'warn',
 
-  'no-empty': ['error', { 'allowEmptyCatch': true }],
+  'no-empty': ['error', { allowEmptyCatch: true }],
 
   // disallow unnecessary parentheses
   // https://eslint.org/docs/rules/no-extra-parens

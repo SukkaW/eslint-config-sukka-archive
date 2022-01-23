@@ -15,5 +15,15 @@ module.exports = {
    * - enables rules that make sense due to TS's typechecking / transpilation.
    */
   overrides: typescriptESLintBuiltinOverrides,
-  rules: {}
+  rules: {},
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx']
+    },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true
+      }
+    }
+  }
 };

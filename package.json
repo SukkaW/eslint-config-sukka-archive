@@ -11,14 +11,15 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "deepmerge": "^4.2.2",
-    "eslint": "^8.3.0",
+    "eslint": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
     "picocolors": "^1.0.0",
     "prettier": "^2.5.0",
     "typescript": "^4.5.2"
   },
   "scripts": {
     "test": "eslint . -c test/index.js",
-    "lint": "eslint . --fix -c node.js",
+    "lint": "eslint . --fix",
     "build": "node tools/generate-config.js"
   },
   "repository": {

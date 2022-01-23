@@ -5,6 +5,6 @@ module.exports = {
     strict: 'off'
   },
   parserOptions: {
-    ecmaVersion: 2020
+    ecmaVersion: 2021
   }
 };

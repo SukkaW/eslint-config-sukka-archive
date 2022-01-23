@@ -263,6 +263,12 @@ module.exports = {
     'prefer-exponentiation-operator': 'error',
     'operator-linebreak': ['error', 'before'],
     quotes: ['error', 'single'],
+    'quote-props': [
+      'error',
+      'as-needed',
+      { keywords: false, unnecessary: true, numbers: false }
+    ],
+    'jsx-quotes': ['off', 'prefer-double'],
     semi: ['error', 'always'],
     'semi-spacing': ['error', { before: false, after: true }],
     'semi-style': ['error', 'last'],

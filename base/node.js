@@ -3,7 +3,7 @@ module.exports = {
   plugins: ['node'],
   rules: {
     // Strict Mode
-    'strict': 'warn',
+    strict: 'warn',
 
     // enforces error handling in callbacks (node environment)
     'handle-callback-err': 'off',
@@ -35,7 +35,7 @@ module.exports = {
 
     // I still use them
     'node/no-deprecated-api': ['error', {
-      'ignoreModuleItems': ['url.parse', 'url.resolve']
+      ignoreModuleItems: ['url.parse', 'url.resolve']
     }]
   },
   env: {

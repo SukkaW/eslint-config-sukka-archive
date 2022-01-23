@@ -231,6 +231,12 @@ module.exports = {
     'prefer-exponentiation-operator': 'error',
     'operator-linebreak': ['error', 'before'],
     quotes: 'off',
+    'quote-props': [
+      'error',
+      'as-needed',
+      { keywords: false, unnecessary: true, numbers: false }
+    ],
+    'jsx-quotes': ['off', 'prefer-double'],
     semi: 'off',
     'semi-spacing': ['error', { before: false, after: true }],
     'semi-style': ['error', 'last'],
@@ -379,5 +385,9 @@ module.exports = {
         'valid-typeof': 'off'
       }
     }
-  ]
+  ],
+  settings: {
+    'import/parsers': { '@typescript-eslint/parser': ['.ts', '.tsx'] },
+    'import/resolver': { typescript: { alwaysTryTypes: true } }
+  }
 };
