@@ -11,7 +11,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "deepmerge": "^4.2.2",
-    "eslint": "^8.5.0",
+    "eslint": "^8.7.0",
     "eslint-plugin-import": "^2.25.3",
     "picocolors": "^1.0.0",
     "prettier": "^2.5.0",
