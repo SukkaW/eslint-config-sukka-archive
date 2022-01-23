@@ -14,6 +14,8 @@ module.exports = {
   // https://eslint.org/docs/rules/block-spacing
   'block-spacing': ['error', 'always'],
 
+  'arrow-spacing': ['error', { before: true, after: true }],
+
   // enforce one true brace style
   'brace-style': ['error', '1tbs', { allowSingleLine: true }],
 

@@ -247,6 +247,11 @@ module.exports = {
   // https://eslint.org/docs/rules/prefer-promise-reject-errors
   'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
 
+  // Prefer Object.hasOwn() over Object.prototype.hasOwnProperty.call()
+  // https://eslint.org/docs/rules/prefer-object-has-own
+  // eslint v8.5.0 is required
+  'prefer-object-has-own': 'error',
+
   // https://eslint.org/docs/rules/prefer-regex-literals
   'prefer-regex-literals': ['error', {
     disallowRedundantWrapping: true
