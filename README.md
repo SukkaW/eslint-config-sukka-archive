@@ -47,6 +47,18 @@ $ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 }
 ```
 
+### React Project
+
+```bash
+$ npm i -D eslint-plugin-react-hooks eslint-plugin-react eslint-plugin-jsx-a11y
+```
+
+```json
+{
+  "extends": "sukka/react"
+}
+```
+
 ## Maintainer
 
 **eslint-config-sukka** © [Sukka](https://github.com/SukkaW), Released under the [MIT](./LICENSE) License.

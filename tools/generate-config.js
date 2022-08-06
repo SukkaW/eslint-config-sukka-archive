@@ -25,6 +25,7 @@ const eslintConfigSukkaNode = require('../node');
 const CONFIG_BASE_NODE = require('../base/node');
 const CONFIG_BASE_LEGACY = require('../base/legacy');
 const CONFIG_BASE_TYPESCRIPT = require('../base/typescript');
+const CONFIG_BASE_REACT = require('../base/react');
 
 /* utility */
 const eslintLinter = new Linter();
@@ -64,6 +65,13 @@ writeConfig(
     CONFIG_BASE_LEGACY
   ),
   'legacy.js'
+);
+
+console.log('========== generate react.js ==========');
+
+writeConfig(
+  CONFIG_BASE_REACT,
+  'react.js'
 );
 
 console.log('========== generate typescript.js ==========');
