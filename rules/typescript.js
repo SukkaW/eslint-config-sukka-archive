@@ -35,5 +35,6 @@ module.exports = {
   '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true, allowAny: true, allowBoolean: true }],
   '@typescript-eslint/unbound-method': 'error',
   '@typescript-eslint/prefer-includes': 'warn',
-  '@typescript-eslint/consistent-type-imports': ['warn', { prefer: 'type-imports', disallowTypeAnnotations: true }]
+  '@typescript-eslint/consistent-type-imports': ['warn', { prefer: 'type-imports', disallowTypeAnnotations: true }],
+  '@typescript-eslint/consistent-type-definitions': 'warn'
 };
