@@ -10,14 +10,14 @@
     "react.js"
   ],
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
     "deepmerge": "^4.2.2",
-    "eslint": "^8.7.0",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint": "^8.23.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "picocolors": "^1.0.0",
-    "prettier": "^2.5.0",
-    "typescript": "^4.5.2"
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.2"
   },
   "scripts": {
     "test": "eslint . -c test/index.js",
