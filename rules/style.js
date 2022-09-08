@@ -146,7 +146,7 @@ module.exports = {
   // https://eslint.org/docs/rules/quote-props.html
   'quote-props': ['error', 'as-needed', { keywords: false, unnecessary: true, numbers: false }],
 
-  'jsx-quotes': ['off', 'prefer-double'],
+  'jsx-quotes': ['error', 'prefer-double'],
 
   // require or disallow use of semicolons instead of ASI
   semi: ['error', 'always'],
