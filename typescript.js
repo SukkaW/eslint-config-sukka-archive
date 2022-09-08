@@ -237,11 +237,11 @@ module.exports = {
       'as-needed',
       { keywords: false, unnecessary: true, numbers: false }
     ],
-    'jsx-quotes': ['off', 'prefer-double'],
+    'jsx-quotes': ['error', 'prefer-double'],
     semi: 'off',
     'semi-spacing': ['error', { before: false, after: true }],
     'semi-style': ['error', 'last'],
-    'space-before-blocks': 'error',
+    'space-before-blocks': 'off',
     'space-before-function-paren': 'off',
     'space-in-parens': ['error', 'never'],
     'space-infix-ops': 'off',
@@ -279,6 +279,28 @@ module.exports = {
       'error',
       { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow' }
     ],
+    '@typescript-eslint/require-await': 'off',
+    '@typescript-eslint/await-thenable': 'error',
+    '@typescript-eslint/no-for-in-array': 'error',
+    '@typescript-eslint/no-misused-promises': 'error',
+    '@typescript-eslint/no-unnecessary-type-assertion': 'error',
+    '@typescript-eslint/no-unsafe-argument': 'error',
+    '@typescript-eslint/no-unsafe-assignment': 'error',
+    '@typescript-eslint/no-unsafe-call': 'error',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unsafe-return': 'off',
+    '@typescript-eslint/restrict-plus-operands': 'error',
+    '@typescript-eslint/restrict-template-expressions': [
+      'error',
+      { allowNumber: true, allowAny: true, allowBoolean: true }
+    ],
+    '@typescript-eslint/unbound-method': 'error',
+    '@typescript-eslint/prefer-includes': 'warn',
+    '@typescript-eslint/consistent-type-imports': [
+      'warn',
+      { prefer: 'type-imports', disallowTypeAnnotations: true }
+    ],
+    '@typescript-eslint/consistent-type-definitions': 'warn',
     '@typescript-eslint/default-param-last': 'error',
     '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
     '@typescript-eslint/no-implied-eval': 'error',
@@ -292,7 +314,6 @@ module.exports = {
         allowTaggedTemplates: false
       }
     ],
-    '@typescript-eslint/require-await': 'off',
     '@typescript-eslint/no-extra-parens': [
       'off',
       'all',
@@ -340,6 +361,7 @@ module.exports = {
     '@typescript-eslint/no-array-constructor': 'error',
     '@typescript-eslint/quotes': ['error', 'single'],
     '@typescript-eslint/semi': ['error', 'always'],
+    '@typescript-eslint/space-before-blocks': 'error',
     '@typescript-eslint/space-before-function-paren': [
       'error',
       { anonymous: 'always', named: 'never', asyncArrow: 'always' }
@@ -361,7 +383,7 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
       rules: {
         'constructor-super': 'off',
         'getter-return': 'off',

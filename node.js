@@ -269,7 +269,7 @@ module.exports = {
       'as-needed',
       { keywords: false, unnecessary: true, numbers: false }
     ],
-    'jsx-quotes': ['off', 'prefer-double'],
+    'jsx-quotes': ['error', 'prefer-double'],
     semi: ['error', 'always'],
     'semi-spacing': ['error', { before: false, after: true }],
     'semi-style': ['error', 'last'],
