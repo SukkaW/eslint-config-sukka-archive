@@ -6,6 +6,9 @@ module.exports = {
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    // exclude styled-jsx and css prop
+    'react/no-unknown-property': ['error', { ignore: ['css', 'jsx'] }],
     'jsx-a11y/alt-text': [
       'warn',
       {
