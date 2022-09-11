@@ -24,7 +24,7 @@ module.exports = {
   '@typescript-eslint/require-await': 'error',
   '@typescript-eslint/await-thenable': 'error',
   '@typescript-eslint/no-for-in-array': 'error',
-  '@typescript-eslint/no-misused-promises': 'error',
+  '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
   '@typescript-eslint/no-unnecessary-type-assertion': 'error',
   '@typescript-eslint/no-unsafe-call': 'error',
   '@typescript-eslint/no-unsafe-member-access': 'off',
