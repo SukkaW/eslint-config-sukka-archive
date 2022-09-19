@@ -503,7 +503,7 @@ module.exports = {
         beforeClosing: 'never'
       }
     ],
-    'react/no-array-index-key': 'warn',
+    'react/no-array-index-key': 'off',
     'react/void-dom-elements-no-children': 'error',
     'react/no-unused-state': 'error',
     'react/jsx-curly-brace-presence': [
@@ -531,7 +531,7 @@ module.exports = {
     'react/no-unused-class-component-methods': 'error',
     'react/hook-use-state': 'off',
     'react/iframe-missing-sandbox': 'warn',
-    'react/jsx-no-leaked-render': 'error',
+    'react/jsx-no-leaked-render': 'off',
     'class-methods-use-this': [
       'error',
       {
