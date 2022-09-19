@@ -6,7 +6,11 @@ module.exports = {
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-filename-extension': [1, {
+      extensions: ['.jsx', '.tsx']
+    }],
     'react/prop-types': 'off',
+    'react/display-name': 'off',
     // exclude styled-jsx and css prop
     'react/no-unknown-property': ['error', { ignore: ['css', 'jsx'] }],
     'jsx-a11y/alt-text': [
