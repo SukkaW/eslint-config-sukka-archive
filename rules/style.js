@@ -112,19 +112,6 @@ module.exports = {
   // disallow un-paren'd mixes of different operators
   // https://eslint.org/docs/rules/no-mixed-operators
   'no-mixed-operators': ['error', {
-    // the list of arithmetic groups disallows mixing `%` and `**`
-    // with other arithmetic operators.
-    groups: [
-      ['%', '**'],
-      ['%', '+'],
-      ['%', '-'],
-      ['%', '*'],
-      ['%', '/'],
-      ['&', '|', '^', '~', '<<', '>>', '>>>'],
-      ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-      ['&&', '||'],
-      ['in', 'instanceof']
-    ],
     allowSamePrecedence: true
   }],
 
