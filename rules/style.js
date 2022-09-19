@@ -105,6 +105,29 @@ module.exports = {
   // https://eslint.org/docs/rules/no-bitwise
   'no-bitwise': 'warn',
 
+  // disallow if as the only statement in an else block
+  // https://eslint.org/docs/rules/no-lonely-if
+  'no-lonely-if': 'error',
+
+  // disallow un-paren'd mixes of different operators
+  // https://eslint.org/docs/rules/no-mixed-operators
+  'no-mixed-operators': ['error', {
+    // the list of arithmetic groups disallows mixing `%` and `**`
+    // with other arithmetic operators.
+    groups: [
+      ['%', '**'],
+      ['%', '+'],
+      ['%', '-'],
+      ['%', '*'],
+      ['%', '/'],
+      ['/', '*'],
+      ['&', '|', '<<', '>>', '>>>'],
+      ['==', '!=', '===', '!=='],
+      ['&&', '||']
+    ],
+    allowSamePrecedence: false
+  }],
+
   // disallow use of chained assignment expressions
   // https://eslint.org/docs/rules/no-multi-assign
   'no-multi-assign': ['error'],

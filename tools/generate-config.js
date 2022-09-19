@@ -70,7 +70,18 @@ writeConfig(
 console.log('========== generate react.js ==========');
 
 writeConfig(
-  CONFIG_BASE_REACT,
+  deepmerge(
+    {
+      rules: {
+        ...sukkaBestPracticesRules,
+        ...sukkaErrorRules,
+        ...sukkaEs6Rules,
+        ...sukkaStyleRules,
+        ...sukkaVariablesRules
+      }
+    },
+    CONFIG_BASE_REACT
+  ),
   'react.js'
 );
 

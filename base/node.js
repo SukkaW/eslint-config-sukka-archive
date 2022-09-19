@@ -31,8 +31,6 @@ module.exports = {
     // disallow use of synchronous methods (off by default)
     'no-sync': 'off',
 
-    'no-mixed-operators': 'error',
-
     // I still use them
     'node/no-deprecated-api': ['error', {
       ignoreModuleItems: ['url.parse', 'url.resolve']
