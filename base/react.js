@@ -146,7 +146,7 @@ module.exports = {
     }],
     // Prevent usage of Array index in keys
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
-    'react/no-array-index-key': 'warn',
+    'react/no-array-index-key': 'off',
     // Prevent void DOM elements from receiving children
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
     'react/void-dom-elements-no-children': 'error',
