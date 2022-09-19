@@ -5,7 +5,14 @@ const chalk = require('picocolors');
 const { writeFileSync } = require('fs');
 const { Linter } = require('eslint');
 const { format, resolveConfig } = require('prettier');
-const deepmerge = require('deepmerge');
+const { deepmerge: createDeepMerge } = require('@fastify/deepmerge');
+const deepmerge = createDeepMerge({
+  all: true,
+  mergeArray(options) {
+    // overwrite instead of concatenating arrays
+    return (target, source) => options.clone(source);
+  }
+});
 
 /* sukka rules */
 const sukkaBestPracticesRules = require('../rules/best-practices');

@@ -3,6 +3,12 @@
 // YOU CAN REGENERATE IT USING npm run build
 
 module.exports = {
+  extends: [
+    'eslint:recommended',
+    'plugin:node/recommended',
+    'plugin:import/recommended'
+  ],
+  plugins: ['node'],
   rules: {
     'accessor-pairs': 'off',
     'array-callback-return': ['error', { allowImplicit: true }],
@@ -419,11 +425,5 @@ module.exports = {
       { ignoreModuleItems: ['url.parse', 'url.resolve'] }
     ]
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:node/recommended',
-    'plugin:import/recommended'
-  ],
-  plugins: ['node'],
   env: { node: true, es6: true }
 };

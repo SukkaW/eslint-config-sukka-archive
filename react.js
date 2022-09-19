@@ -3,35 +3,16 @@
 // YOU CAN REGENERATE IT USING npm run build
 
 module.exports = {
+  plugins: ['import', 'react', 'jsx-a11y'],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended'
+  ],
   rules: {
     'accessor-pairs': 'off',
     'array-callback-return': ['error', { allowImplicit: true }],
     'block-scoped-var': 'error',
-    'class-methods-use-this': [
-      'error',
-      { exceptMethods: [] },
-      'error',
-      {
-        exceptMethods: [
-          'render',
-          'getInitialState',
-          'getDefaultProps',
-          'getChildContext',
-          'componentWillMount',
-          'UNSAFE_componentWillMount',
-          'componentDidMount',
-          'componentWillReceiveProps',
-          'UNSAFE_componentWillReceiveProps',
-          'shouldComponentUpdate',
-          'componentWillUpdate',
-          'UNSAFE_componentWillUpdate',
-          'componentDidUpdate',
-          'componentWillUnmount',
-          'componentDidCatch',
-          'getSnapshotBeforeUpdate'
-        ]
-      }
-    ],
     curly: ['error', 'multi-line'],
     'default-case': ['error', { commentPattern: '^no default$' }],
     'default-case-last': 'error',
@@ -430,7 +411,7 @@ module.exports = {
     'no-shadow': 'error',
     'no-undef-init': 'error',
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
+    'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.tsx'] }],
     'react/prop-types': 'off',
     'react/display-name': ['off', { ignoreTranspilerName: false }],
     'react/no-unknown-property': ['error', { ignore: ['css', 'jsx'] }],
@@ -566,7 +547,30 @@ module.exports = {
     'react/no-unused-class-component-methods': 'error',
     'react/hook-use-state': 'error',
     'react/iframe-missing-sandbox': 'warn',
-    'react/jsx-no-leaked-render': 'errpr',
+    'react/jsx-no-leaked-render': 'error',
+    'class-methods-use-this': [
+      'error',
+      {
+        exceptMethods: [
+          'render',
+          'getInitialState',
+          'getDefaultProps',
+          'getChildContext',
+          'componentWillMount',
+          'UNSAFE_componentWillMount',
+          'componentDidMount',
+          'componentWillReceiveProps',
+          'UNSAFE_componentWillReceiveProps',
+          'shouldComponentUpdate',
+          'componentWillUpdate',
+          'UNSAFE_componentWillUpdate',
+          'componentDidUpdate',
+          'componentWillUnmount',
+          'componentDidCatch',
+          'getSnapshotBeforeUpdate'
+        ]
+      }
+    ],
     'jsx-a11y/alt-text': ['warn', { elements: ['img'], img: ['Image'] }],
     'jsx-a11y/aria-props': 'warn',
     'jsx-a11y/aria-proptypes': 'warn',
@@ -574,12 +578,6 @@ module.exports = {
     'jsx-a11y/role-has-required-aria-props': 'warn',
     'jsx-a11y/role-supports-aria-props': 'warn'
   },
-  plugins: ['import', 'react', 'jsx-a11y'],
-  extends: [
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended'
-  ],
   overrides: [
     {
       files: ['**/*.ts?(x)'],

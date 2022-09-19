@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sukka",
-  "version": "1.6.0",
+  "version": "1.6.3",
   "description": "ESLint config for Sukka projects",
   "files": [
     "rules",
@@ -10,9 +10,9 @@
     "react.js"
   ],
   "devDependencies": {
+    "@fastify/deepmerge": "^1.1.0",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "confusing-browser-globals": "^1.0.11",
-    "deepmerge": "^4.2.2",
     "eslint": "^8.23.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",

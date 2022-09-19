@@ -7,7 +7,7 @@ module.exports = {
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-filename-extension': [1, {
+    'react/jsx-filename-extension': ['warn', {
       extensions: ['.jsx', '.tsx']
     }],
     'react/prop-types': 'off',
@@ -206,7 +206,7 @@ module.exports = {
     'react/iframe-missing-sandbox': 'warn',
     // Prevent problematic leaked values from being rendered
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/c42b624d0fb9ad647583a775ab9751091eec066f/docs/rules/jsx-no-leaked-render.md
-    'react/jsx-no-leaked-render': 'errpr',
+    'react/jsx-no-leaked-render': 'error',
 
     'class-methods-use-this': ['error', {
       exceptMethods: [

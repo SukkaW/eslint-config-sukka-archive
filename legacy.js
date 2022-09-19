@@ -3,6 +3,7 @@
 // YOU CAN REGENERATE IT USING npm run build
 
 module.exports = {
+  extends: ['eslint:recommended'],
   rules: {
     'accessor-pairs': 'off',
     'array-callback-return': ['error', { allowImplicit: true }],
@@ -44,71 +45,6 @@ module.exports = {
     'no-new-wrappers': 'error',
     'no-octal-escape': 'error',
     'no-proto': 'error',
-    'no-restricted-properties': [
-      'error',
-      {
-        object: 'arguments',
-        property: 'callee',
-        message: 'arguments.callee is deprecated'
-      },
-      {
-        object: 'global',
-        property: 'isFinite',
-        message: 'Please use Number.isFinite instead'
-      },
-      {
-        object: 'self',
-        property: 'isFinite',
-        message: 'Please use Number.isFinite instead'
-      },
-      {
-        object: 'window',
-        property: 'isFinite',
-        message: 'Please use Number.isFinite instead'
-      },
-      {
-        object: 'global',
-        property: 'isNaN',
-        message: 'Please use Number.isNaN instead'
-      },
-      {
-        object: 'self',
-        property: 'isNaN',
-        message: 'Please use Number.isNaN instead'
-      },
-      {
-        object: 'window',
-        property: 'isNaN',
-        message: 'Please use Number.isNaN instead'
-      },
-      {
-        property: '__defineGetter__',
-        message: 'Please use Object.defineProperty instead.'
-      },
-      {
-        property: '__defineSetter__',
-        message: 'Please use Object.defineProperty instead.'
-      },
-      {
-        object: 'Math',
-        property: 'pow',
-        message: 'Use the exponentiation operator (**) instead.'
-      },
-      'error',
-      {
-        object: 'arguments',
-        property: 'callee',
-        message: 'arguments.callee is deprecated'
-      },
-      {
-        property: '__defineGetter__',
-        message: 'Please use Object.defineProperty instead.'
-      },
-      {
-        property: '__defineSetter__',
-        message: 'Please use Object.defineProperty instead.'
-      }
-    ],
     'no-return-assign': ['error', 'always'],
     'no-return-await': 'error',
     'no-self-compare': 'error',
@@ -187,7 +123,6 @@ module.exports = {
       'error',
       { ignoreDestructuring: false, ignoreImport: false, ignoreExport: false }
     ],
-    'no-var': 'off',
     'object-shorthand': [
       'error',
       'always',
@@ -198,7 +133,6 @@ module.exports = {
       { allowNamedFunctions: false, allowUnboundThis: true }
     ],
     'prefer-const': ['error', { ignoreReadBeforeAssign: true }],
-    'prefer-numeric-literals': 'off',
     'prefer-reflect': 'off',
     'prefer-rest-params': 'error',
     'prefer-template': 'warn',
@@ -419,9 +353,26 @@ module.exports = {
     ],
     'no-shadow': 'error',
     'no-undef-init': 'error',
+    'prefer-numeric-literals': 'off',
+    'no-restricted-properties': [
+      'error',
+      {
+        object: 'arguments',
+        property: 'callee',
+        message: 'arguments.callee is deprecated'
+      },
+      {
+        property: '__defineGetter__',
+        message: 'Please use Object.defineProperty instead.'
+      },
+      {
+        property: '__defineSetter__',
+        message: 'Please use Object.defineProperty instead.'
+      }
+    ],
+    'no-var': 'off',
     'prefer-object-spread': 'off',
     strict: ['error', 'safe']
   },
-  extends: ['eslint:recommended'],
   env: { browser: true, node: true, amd: false, mocha: false, jasmine: false }
 };
