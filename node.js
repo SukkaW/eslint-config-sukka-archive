@@ -409,7 +409,6 @@ module.exports = {
       'toolbar',
       'top'
     ],
-    'no-shadow': 'error',
     'no-undef-init': 'error',
     strict: 'warn',
     'handle-callback-err': 'off',

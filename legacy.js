@@ -351,7 +351,6 @@ module.exports = {
       'toolbar',
       'top'
     ],
-    'no-shadow': 'error',
     'no-undef-init': 'error',
     'prefer-numeric-literals': 'off',
     'no-restricted-properties': [

@@ -393,7 +393,6 @@ module.exports = {
       'toolbar',
       'top'
     ],
-    'no-shadow': 'off',
     'no-undef-init': 'error',
     '@typescript-eslint/naming-convention': [
       'warn',
@@ -526,7 +525,6 @@ module.exports = {
       'error',
       { functions: false, classes: true, variables: true }
     ],
-    '@typescript-eslint/no-shadow': 'error',
     '@typescript-eslint/no-namespace': 'off'
   },
   settings: {

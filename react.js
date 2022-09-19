@@ -408,7 +408,6 @@ module.exports = {
       'toolbar',
       'top'
     ],
-    'no-shadow': 'error',
     'no-undef-init': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.tsx'] }],
