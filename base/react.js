@@ -20,9 +20,6 @@ module.exports = {
     // Validate closing bracket location in JSX
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
     'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
-    // Validate closing tag location in JSX
-    // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
-    'react/jsx-closing-tag-location': 'error',
     // Enforce or disallow spaces inside of curly braces in JSX attributes
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
     'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
