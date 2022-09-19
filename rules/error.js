@@ -47,7 +47,8 @@ module.exports = {
     vars: 'all',
     varsIgnorePattern: '^_',
     args: 'after-used',
-    argsIgnorePattern: '^_'
+    argsIgnorePattern: '^_',
+    ignoreRestSiblings: true
   }],
 
   // Disallow Unused Private Class Members
