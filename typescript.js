@@ -269,11 +269,29 @@ module.exports = {
     '@typescript-eslint/naming-convention': [
       'warn',
       {
-        selector: 'variable',
-        format: ['camelCase', 'PascalCase', 'UPPER_CASE']
+        selector: 'default',
+        format: ['camelCase', 'UPPER_CASE'],
+        leadingUnderscore: 'allow',
+        trailingUnderscore: 'allow'
       },
-      { selector: 'function', format: ['camelCase', 'PascalCase'] },
-      { selector: 'typeLike', format: ['PascalCase'] }
+      {
+        selector: 'variable',
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        leadingUnderscore: 'allow',
+        trailingUnderscore: 'allow'
+      },
+      {
+        selector: 'function',
+        format: ['camelCase', 'PascalCase'],
+        leadingUnderscore: 'allow',
+        trailingUnderscore: 'allow'
+      },
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+        leadingUnderscore: 'allow',
+        trailingUnderscore: 'allow'
+      }
     ],
     '@typescript-eslint/consistent-type-assertions': [
       'error',
