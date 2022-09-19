@@ -35,7 +35,12 @@ module.exports = {
     ignore: [] // WhileStatement, DoWhileStatement, ForStatement, ForInStatement, ForOfStatement
   }],
 
-  'no-unused-vars': ['error', { args: 'none' }],
+  'no-unused-vars': ['error', {
+    vars: 'all',
+    varsIgnorePattern: '^_',
+    args: 'after-used',
+    argsIgnorePattern: '^_'
+  }],
 
   // Disallow Unused Private Class Members
   // https://eslint.org/docs/rules/no-unused-private-class-members
