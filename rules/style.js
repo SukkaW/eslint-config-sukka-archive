@@ -112,6 +112,20 @@ module.exports = {
   // disallow un-paren'd mixes of different operators
   // https://eslint.org/docs/rules/no-mixed-operators
   'no-mixed-operators': ['error', {
+    groups: [
+      ['**', '+'],
+      ['**', '-'],
+      ['**', '*'],
+      ['**', '/'],
+      ['%', '+'],
+      ['%', '-'],
+      ['%', '*'],
+      ['%', '/'],
+      ['%', '**'],
+      ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+      ['&&', '||'],
+      ['in', 'instanceof']
+    ],
     allowSamePrecedence: true
   }],
 
