@@ -120,12 +120,12 @@ module.exports = {
       ['%', '-'],
       ['%', '*'],
       ['%', '/'],
-      ['/', '*'],
-      ['&', '|', '<<', '>>', '>>>'],
-      ['==', '!=', '===', '!=='],
-      ['&&', '||']
+      ['&', '|', '^', '~', '<<', '>>', '>>>'],
+      ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+      ['&&', '||'],
+      ['in', 'instanceof']
     ],
-    allowSamePrecedence: false
+    allowSamePrecedence: true
   }],
 
   // disallow use of chained assignment expressions
