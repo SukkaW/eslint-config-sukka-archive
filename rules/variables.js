@@ -24,9 +24,6 @@ module.exports = {
     }
   ].concat(confusingBrowserGlobals),
 
-  // disallow declaration of variables already declared in the outer scope
-  'no-shadow': 'error',
-
   // disallow use of undefined when initializing variables
   'no-undef-init': 'error'
 };
