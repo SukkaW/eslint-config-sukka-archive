@@ -326,7 +326,15 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-loss-of-precision': 'warn',
-    '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_'
+      }
+    ],
     '@typescript-eslint/no-duplicate-imports': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
     '@typescript-eslint/brace-style': [

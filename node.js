@@ -142,7 +142,15 @@ module.exports = {
     'no-loss-of-precision': 'warn',
     'no-promise-executor-return': 'error',
     'no-unreachable-loop': ['error', { ignore: [] }],
-    'no-unused-vars': ['error', { args: 'none' }],
+    'no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_'
+      }
+    ],
     'no-unused-private-class-members': 'error',
     'no-useless-backreference': 'error',
     'no-negated-in-lhs': 'off',

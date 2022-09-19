@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sukka",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "ESLint config for Sukka projects",
   "files": [
     "rules",
