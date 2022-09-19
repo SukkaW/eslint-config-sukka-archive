@@ -17,9 +17,6 @@ module.exports = {
     // Enforce boolean attributes notation in JSX
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
     'react/jsx-boolean-value': ['error', 'never', { always: [] }],
-    // Validate closing bracket location in JSX
-    // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
-    'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
     // Enforce or disallow spaces inside of curly braces in JSX attributes
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
     'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
