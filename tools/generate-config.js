@@ -22,6 +22,7 @@ const { default: typescriptESLintBuiltinRules } = require('@typescript-eslint/es
 const eslintConfigSukkaNode = require('../node');
 
 /* sukka eslint config base */
+const CONFIG_BASE_BASE = require('../base/base');
 const CONFIG_BASE_NODE = require('../base/node');
 const CONFIG_BASE_LEGACY = require('../base/legacy');
 const CONFIG_BASE_TYPESCRIPT = require('../base/typescript');
@@ -30,6 +31,24 @@ const CONFIG_BASE_REACT = require('../base/react');
 /* utility */
 const eslintLinter = new Linter();
 const prettierConfig = resolveConfig.sync(__dirname);
+
+console.log('========== generate base.js ==========');
+
+writeConfig(
+  deepmerge(
+    {
+      rules: {
+        ...sukkaBestPracticesRules,
+        ...sukkaErrorRules,
+        ...sukkaEs6Rules,
+        ...sukkaStyleRules,
+        ...sukkaVariablesRules
+      }
+    },
+    CONFIG_BASE_BASE
+  ),
+  'base.js'
+);
 
 console.log('========== generate node.js ==========');
 

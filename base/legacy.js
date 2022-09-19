@@ -1,7 +1,6 @@
 module.exports = {
   extends: ['eslint:recommended'],
   rules: {
-    'comma-dangle': ['error', 'never'],
     'prefer-numeric-literals': 'off',
     'no-restricted-properties': ['error', {
       object: 'arguments',

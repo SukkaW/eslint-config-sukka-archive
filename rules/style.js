@@ -22,7 +22,7 @@ module.exports = {
   // require camel case names
   camelcase: ['warn', { properties: 'never', ignoreDestructuring: false }],
 
-  'comma-dangle': 'error',
+  'comma-dangle': ['error', 'never'],
 
   // enforce spacing before and after comma
   'comma-spacing': ['error', { before: false, after: true }],
