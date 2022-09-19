@@ -420,7 +420,6 @@ module.exports = {
     'react/no-unknown-property': ['error', { ignore: ['css', 'jsx'] }],
     'react/jsx-boolean-value': ['error', 'never', { always: [] }],
     'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
-    'react/jsx-closing-tag-location': 'error',
     'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
     'react/jsx-handler-names': [
       'off',
