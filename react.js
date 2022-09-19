@@ -269,23 +269,7 @@ module.exports = {
     'no-array-constructor': 'error',
     'no-bitwise': 'warn',
     'no-lonely-if': 'error',
-    'no-mixed-operators': [
-      'error',
-      {
-        groups: [
-          ['%', '**'],
-          ['%', '+'],
-          ['%', '-'],
-          ['%', '*'],
-          ['%', '/'],
-          ['&', '|', '^', '~', '<<', '>>', '>>>'],
-          ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-          ['&&', '||'],
-          ['in', 'instanceof']
-        ],
-        allowSamePrecedence: true
-      }
-    ],
+    'no-mixed-operators': ['error', { allowSamePrecedence: true }],
     'no-multi-assign': ['error'],
     'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
     'no-negated-condition': 'off',
@@ -545,7 +529,6 @@ module.exports = {
     'react/jsx-no-constructed-context-values': 'error',
     'react/no-unstable-nested-components': 'error',
     'react/no-unused-class-component-methods': 'error',
-    // way too many fxxking false positive, disable for now
     'react/hook-use-state': 'off',
     'react/iframe-missing-sandbox': 'warn',
     'react/jsx-no-leaked-render': 'error',

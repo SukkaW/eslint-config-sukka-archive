@@ -200,7 +200,8 @@ module.exports = {
     'react/no-unused-class-component-methods': 'error',
     // Ensure destructuring and symmetric naming of useState hook value and setter variables
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/c8833f301314dab3e79ef7ac4cf863e4d5fa0019/docs/rules/hook-use-state.md
-    'react/hook-use-state': 'error',
+    // Disable for now, fxxking way too many false positives
+    'react/hook-use-state': 'off',
     // Enforce sandbox attribute on iframe elements
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/c8833f301314dab3e79ef7ac4cf863e4d5fa0019/docs/rules/iframe-missing-sandbox.md
     'react/iframe-missing-sandbox': 'warn',

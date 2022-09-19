@@ -212,23 +212,7 @@ module.exports = {
     'no-array-constructor': 'error',
     'no-bitwise': 'warn',
     'no-lonely-if': 'error',
-    'no-mixed-operators': [
-      'error',
-      {
-        groups: [
-          ['%', '**'],
-          ['%', '+'],
-          ['%', '-'],
-          ['%', '*'],
-          ['%', '/'],
-          ['&', '|', '^', '~', '<<', '>>', '>>>'],
-          ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-          ['&&', '||'],
-          ['in', 'instanceof']
-        ],
-        allowSamePrecedence: true
-      }
-    ],
+    'no-mixed-operators': ['error', { allowSamePrecedence: true }],
     'no-multi-assign': ['error'],
     'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
     'no-negated-condition': 'off',
