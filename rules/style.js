@@ -20,7 +20,13 @@ module.exports = {
   'brace-style': ['error', '1tbs', { allowSingleLine: true }],
 
   // require camel case names
-  camelcase: ['warn', { properties: 'never', ignoreDestructuring: false }],
+  camelcase: ['warn', {
+    properties: 'never',
+    ignoreDestructuring: false,
+    ignoreImports: true,
+    ignoreGlobals: true,
+    allow: ['^UNSAFE_', '^experimental_', '^__DEV__']
+  }],
 
   'comma-dangle': ['error', 'never'],
 
