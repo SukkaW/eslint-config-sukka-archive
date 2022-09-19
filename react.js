@@ -545,7 +545,8 @@ module.exports = {
     'react/jsx-no-constructed-context-values': 'error',
     'react/no-unstable-nested-components': 'error',
     'react/no-unused-class-component-methods': 'error',
-    'react/hook-use-state': 'error',
+    // way too many fxxking false positive, disable for now
+    'react/hook-use-state': 'off',
     'react/iframe-missing-sandbox': 'warn',
     'react/jsx-no-leaked-render': 'error',
     'class-methods-use-this': [
