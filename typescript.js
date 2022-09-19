@@ -398,13 +398,13 @@ module.exports = {
       'warn',
       {
         selector: 'default',
-        format: ['camelCase', 'UPPER_CASE'],
+        format: ['camelCase', 'UPPER_CASE', 'snake_case'],
         leadingUnderscore: 'allow',
         trailingUnderscore: 'allow'
       },
       {
         selector: 'variable',
-        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE', 'snake_case'],
         leadingUnderscore: 'allow',
         trailingUnderscore: 'allow'
       },
