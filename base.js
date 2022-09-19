@@ -150,7 +150,8 @@ module.exports = {
         vars: 'all',
         varsIgnorePattern: '^_',
         args: 'after-used',
-        argsIgnorePattern: '^_'
+        argsIgnorePattern: '^_',
+        ignoreRestSiblings: true
       }
     ],
     'no-unused-private-class-members': 'error',
