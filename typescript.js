@@ -402,20 +402,20 @@ module.exports = {
       {
         selector: 'variable',
         format: ['camelCase', 'PascalCase', 'UPPER_CASE', 'snake_case'],
-        leadingUnderscore: 'allow',
-        trailingUnderscore: 'allow'
+        leadingUnderscore: 'allowSingleOrDouble',
+        trailingUnderscore: 'allowSingleOrDouble'
       },
       {
         selector: 'function',
         format: ['camelCase', 'PascalCase'],
-        leadingUnderscore: 'allow',
-        trailingUnderscore: 'allow'
+        leadingUnderscore: 'allowSingleOrDouble',
+        trailingUnderscore: 'allowSingleOrDouble'
       },
       {
         selector: 'typeLike',
         format: ['PascalCase'],
-        leadingUnderscore: 'allow',
-        trailingUnderscore: 'allow'
+        leadingUnderscore: 'allowSingleOrDouble',
+        trailingUnderscore: 'allowSingleOrDouble'
       }
     ],
     '@typescript-eslint/consistent-type-assertions': [

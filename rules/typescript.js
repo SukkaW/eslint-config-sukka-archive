@@ -18,7 +18,7 @@ module.exports = {
     {
       selector: 'typeLike',
       format: ['PascalCase'],
-      leadingUnderscore: 'allowallowSingleOrDouble',
+      leadingUnderscore: 'allowSingleOrDouble',
       trailingUnderscore: 'allowSingleOrDouble'
     }
   ],

@@ -198,7 +198,16 @@ module.exports = {
     'array-bracket-spacing': ['error', 'never'],
     'block-spacing': ['error', 'always'],
     'brace-style': ['error', '1tbs', { allowSingleLine: true }],
-    camelcase: ['warn', { properties: 'never', ignoreDestructuring: false }],
+    camelcase: [
+      'warn',
+      {
+        properties: 'never',
+        ignoreDestructuring: false,
+        ignoreImports: true,
+        ignoreGlobals: true,
+        allow: ['^UNSAFE_', '^experimental_', '^__DEV__']
+      }
+    ],
     'comma-dangle': ['error', 'never'],
     'comma-spacing': ['error', { before: false, after: true }],
     'comma-style': [
