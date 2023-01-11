@@ -1,0 +1,21 @@
+module.exports = {
+  '@dimensiondev/array/no-unneeded-flat-map': 'error',
+  '@dimensiondev/array/prefer-from': 'error',
+  '@dimensiondev/browser/no-set-html': 'off',
+  '@dimensiondev/browser/prefer-location-assign': 'warn',
+  '@dimensiondev/jsx/no-template-literal': 'error',
+  '@dimensiondev/jsx/no-unneeded-nested': 'error',
+  '@dimensiondev/string/no-locale-case': 'warn',
+  '@dimensiondev/string/no-simple-template-literal': 'error',
+  '@dimensiondev/type/no-instanceof-wrapper': 'error',
+  '@dimensiondev/unicode/no-bidi': 'warn',
+  '@dimensiondev/unicode/no-invisible': 'warn',
+  '@dimensiondev/ban-eslint-disable': ['error', 'allow-with-description'],
+  '@dimensiondev/no-redundant-variable': 'error',
+  '@dimensiondev/no-single-return': 'error',
+  '@dimensiondev/no-top-level': 'warn',
+  '@dimensiondev/no-unsafe-date': 'warn',
+  '@dimensiondev/prefer-early-return': ['error', { maximumStatements: 10 }],
+  '@dimensiondev/prefer-fetch': 'error',
+  '@dimensiondev/prefer-timer-id': 'warn'
+};

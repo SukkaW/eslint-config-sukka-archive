@@ -77,5 +77,10 @@ module.exports = {
 
   // ensure that the results of typeof are compared against a valid string
   // https://eslint.org/docs/rules/valid-typeof
-  'valid-typeof': ['error', { requireStringLiterals: true }]
+  'valid-typeof': ['error', { requireStringLiterals: true }],
+
+  // Disallow new operators with global non-constructor functions
+  // https://eslint.org/docs/latest/rules/no-new-native-nonconstructor
+  // TODO: semver-major, enable
+  'no-new-native-nonconstructor': 'error'
 };

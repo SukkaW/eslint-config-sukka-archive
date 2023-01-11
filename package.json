@@ -43,5 +43,8 @@
   "homepage": "https://github.com/SukkaW/eslint-config-sukka#readme",
   "engines": {
     "node": ">= 8.3.0"
+  },
+  "dependencies": {
+    "@dimensiondev/eslint-plugin": "0.0.2"
   }
 }

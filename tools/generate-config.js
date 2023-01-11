@@ -22,6 +22,9 @@ const sukkaStyleRules = require('../config/style');
 const sukkaVariablesRules = require('../config/variables');
 const sukkaTypeScriptRules = require('../config/typescript');
 
+const septsEslintRules = require('../config/from-septs');
+const septsEslintTypeScriptRules = require('../config/from-septs-ts-only');
+
 /* external rules */
 const { default: typescriptESLintBuiltinRules } = require('@typescript-eslint/eslint-plugin/dist/rules');
 
@@ -67,7 +70,8 @@ writeConfig(
         ...sukkaErrorRules,
         ...sukkaEs6Rules,
         ...sukkaStyleRules,
-        ...sukkaVariablesRules
+        ...sukkaVariablesRules,
+        ...septsEslintRules
       }
     },
     CONFIG_BASE_NODE
@@ -103,7 +107,8 @@ writeConfig(
         ...sukkaErrorRules,
         ...sukkaEs6Rules,
         ...sukkaStyleRules,
-        ...sukkaVariablesRules
+        ...sukkaVariablesRules,
+        ...septsEslintRules
       }
     },
     CONFIG_BASE_REACT
@@ -139,7 +144,9 @@ const generatedTsConfigRules = {
   ...sukkaEs6Rules,
   ...sukkaStyleRules,
   ...sukkaVariablesRules,
-  ...sukkaTypeScriptRules
+  ...sukkaTypeScriptRules,
+  ...septsEslintRules,
+  ...septsEslintTypeScriptRules
 };
 
 Object.entries(generatedTsConfigRules).forEach(([ruleName, ruleConfig]) => {

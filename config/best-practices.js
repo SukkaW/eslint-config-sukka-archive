@@ -70,6 +70,10 @@ module.exports = {
   // https://eslint.org/docs/rules/no-empty-pattern
   'no-empty-pattern': 'error',
 
+  // Disallow empty static blocks
+  // https://eslint.org/docs/latest/rules/no-empty-static-block
+  'no-empty-static-block': 'error',
+
   // disallow use of eval()
   // https://eslint.org/docs/rules/no-eval
   'no-eval': 'error',

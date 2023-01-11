@@ -1,7 +1,7 @@
 const { overrides: typescriptESLintBuiltinOverrides } = require('@typescript-eslint/eslint-plugin/dist/configs/eslint-recommended');
 
 module.exports = {
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', '@dimensiondev'],
   parser: '@typescript-eslint/parser',
   extends: [
     'eslint:recommended',
