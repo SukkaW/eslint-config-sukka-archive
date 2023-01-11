@@ -15,12 +15,12 @@ const deepmerge = createDeepMerge({
 });
 
 /* sukka rules */
-const sukkaBestPracticesRules = require('../rules/best-practices');
-const sukkaErrorRules = require('../rules/error');
-const sukkaEs6Rules = require('../rules/es6');
-const sukkaStyleRules = require('../rules/style');
-const sukkaVariablesRules = require('../rules/variables');
-const sukkaTypeScriptRules = require('../rules/typescript');
+const sukkaBestPracticesRules = require('../config/best-practices');
+const sukkaErrorRules = require('../config/error');
+const sukkaEs6Rules = require('../config/es6');
+const sukkaStyleRules = require('../config/style');
+const sukkaVariablesRules = require('../config/variables');
+const sukkaTypeScriptRules = require('../config/typescript');
 
 /* external rules */
 const { default: typescriptESLintBuiltinRules } = require('@typescript-eslint/eslint-plugin/dist/rules');

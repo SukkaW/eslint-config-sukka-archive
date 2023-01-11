@@ -38,5 +38,7 @@ module.exports = {
   '@typescript-eslint/unbound-method': 'error',
   '@typescript-eslint/prefer-includes': 'warn',
   '@typescript-eslint/consistent-type-imports': ['warn', { prefer: 'type-imports', disallowTypeAnnotations: true }],
-  '@typescript-eslint/consistent-type-definitions': 'warn'
+  '@typescript-eslint/consistent-type-exports': 'warn',
+  '@typescript-eslint/consistent-type-definitions': 'warn',
+  '@typescript-eslint/prefer-ts-expect-error': 'warn'
 };
