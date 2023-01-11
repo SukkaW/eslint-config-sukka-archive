@@ -10,15 +10,15 @@
     "react.js"
   ],
   "devDependencies": {
-    "@fastify/deepmerge": "^1.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@fastify/deepmerge": "^1.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
     "confusing-browser-globals": "^1.0.11",
-    "eslint": "^8.23.0",
+    "eslint": "^8.31.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "picocolors": "^1.0.0",
-    "prettier": "^2.7.1",
-    "typescript": "^4.8.2"
+    "prettier": "^2.8.2",
+    "typescript": "^4.9.4"
   },
   "scripts": {
     "test": "eslint . -c test/index.js",
@@ -45,6 +45,6 @@
     "node": ">= 8.3.0"
   },
   "dependencies": {
-    "@dimensiondev/eslint-plugin": "0.0.2"
+    "@fluffyfox/eslint-plugin": "^0.1.0"
   }
 }
