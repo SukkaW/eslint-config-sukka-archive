@@ -3,7 +3,7 @@
 // YOU CAN REGENERATE IT USING npm run build
 
 module.exports = {
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', '@dimensiondev'],
   parser: '@typescript-eslint/parser',
   extends: [
     'eslint:recommended',
@@ -58,6 +58,7 @@ module.exports = {
     'no-constructor-return': 'error',
     'no-else-return': ['error', { allowElseIf: false }],
     'no-empty-pattern': 'error',
+    'no-empty-static-block': 'error',
     'no-eval': 'error',
     'no-extend-native': 'error',
     'no-extra-bind': 'error',
@@ -171,6 +172,7 @@ module.exports = {
     'use-isnan': 'warn',
     'valid-jsdoc': 'off',
     'valid-typeof': ['error', { requireStringLiterals: true }],
+    'no-new-native-nonconstructor': 'error',
     'arrow-spacing': ['error', { before: true, after: true }],
     'generator-star-spacing': ['error', { before: false, after: true }],
     'no-confusing-arrow': ['error', { allowParens: true }],
@@ -443,7 +445,37 @@ module.exports = {
       'warn',
       { prefer: 'type-imports', disallowTypeAnnotations: true }
     ],
+    '@typescript-eslint/consistent-type-exports': 'warn',
     '@typescript-eslint/consistent-type-definitions': 'warn',
+    '@typescript-eslint/prefer-ts-expect-error': 'warn',
+    '@dimensiondev/array/no-unneeded-flat-map': 'error',
+    '@dimensiondev/array/prefer-from': 'error',
+    '@dimensiondev/browser/no-set-html': 'off',
+    '@dimensiondev/browser/prefer-location-assign': 'warn',
+    '@dimensiondev/jsx/no-template-literal': 'error',
+    '@dimensiondev/jsx/no-unneeded-nested': 'error',
+    '@dimensiondev/string/no-locale-case': 'warn',
+    '@dimensiondev/string/no-simple-template-literal': 'error',
+    '@dimensiondev/type/no-instanceof-wrapper': 'error',
+    '@dimensiondev/unicode/no-bidi': 'warn',
+    '@dimensiondev/unicode/no-invisible': 'warn',
+    '@dimensiondev/ban-eslint-disable': ['error', 'allow-with-description'],
+    '@dimensiondev/no-redundant-variable': 'error',
+    '@dimensiondev/no-single-return': 'error',
+    '@dimensiondev/no-top-level': 'warn',
+    '@dimensiondev/no-unsafe-date': 'warn',
+    '@dimensiondev/prefer-early-return': ['error', { maximumStatements: 10 }],
+    '@dimensiondev/prefer-fetch': 'error',
+    '@dimensiondev/prefer-timer-id': 'warn',
+    '@dimensiondev/browser/prefer-dataset': 'off',
+    '@dimensiondev/browser/prefer-event-target': 'warn',
+    '@dimensiondev/browser/prefer-keyboard-event-key': 'warn',
+    '@dimensiondev/browser/prefer-modern-dom-apis': 'error',
+    '@dimensiondev/browser/prefer-text-content': 'warn',
+    '@dimensiondev/string/no-unneeded-to-string': 'error',
+    '@dimensiondev/type/no-force-cast-via-top-type': 'error',
+    '@dimensiondev/type/no-wrapper-type-reference': 'error',
+    '@dimensiondev/no-default-error': 'warn',
     '@typescript-eslint/default-param-last': 'error',
     '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
     '@typescript-eslint/no-implied-eval': 'error',
@@ -528,7 +560,19 @@ module.exports = {
   settings: {
     'import/parsers': { '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'] },
     'import/resolver': {
-      node: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+      node: {
+        extensions: [
+          '.js',
+          '.jsx',
+          '.mjs',
+          '.cjs',
+          '.ts',
+          '.tsx',
+          '.mts',
+          '.cts',
+          '.d.ts'
+        ]
+      },
       typescript: { alwaysTryTypes: true }
     }
   }
