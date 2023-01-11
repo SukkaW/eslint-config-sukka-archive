@@ -6,10 +6,9 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:node/recommended',
-    'plugin:import/recommended',
-    '@dimensiondev'
+    'plugin:import/recommended'
   ],
-  plugins: ['node'],
+  plugins: ['node', '@dimensiondev'],
   rules: {
     'accessor-pairs': 'off',
     'array-callback-return': ['error', { allowImplicit: true }],
