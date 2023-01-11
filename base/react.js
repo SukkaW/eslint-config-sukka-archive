@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['import', 'react', 'jsx-a11y', '@dimensiondev'],
+  plugins: ['import', 'react', 'jsx-a11y', '@fluffyfox'],
   extends: [
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',

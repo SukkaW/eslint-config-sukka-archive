@@ -1,6 +1,6 @@
 module.exports = {
   extends: ['eslint:recommended', 'plugin:node/recommended', 'plugin:import/recommended'],
-  plugins: ['node', '@dimensiondev'],
+  plugins: ['node', '@fluffyfox'],
   rules: {
     // Strict Mode
     strict: 'warn',

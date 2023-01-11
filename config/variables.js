@@ -1,5 +1,5 @@
 // This require only contains constants and will be processed by JSON.stringify anyway
-// eslint-disable-next-line node/no-unpublished-require
+// eslint-disable-next-line node/no-unpublished-require -- This will be bundled into the final output
 const confusingBrowserGlobals = require('confusing-browser-globals');
 
 module.exports = {
