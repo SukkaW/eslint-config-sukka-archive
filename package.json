@@ -5,7 +5,7 @@
     "build": "turbo build",
     "lint": "eslint . --fix",
     "test": "turbo test",
-    "release": "bumpp -r && pnpm -r publish"
+    "release": "pnpm run build && bumpp -r --no-push --no-commit --no-tag && pnpm -r publish --no-git-check"
   },
   "devDependencies": {
     "@types/chai": "^4.3.4",
@@ -23,5 +23,5 @@
     "turbo": "^1.8.3",
     "typescript": "^4.9.4"
   },
-  "version": "2.0.0"
+  "version": "2.0.0-beta.0"
 }

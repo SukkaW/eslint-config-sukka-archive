@@ -1,0 +1,5 @@
+reporter: spec
+opts: false
+spec: "src/**/*.test.ts"
+require: "ts-node/register"
+node-option: "loader=ts-node"

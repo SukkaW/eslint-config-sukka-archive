@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+tmp/
+*.log
+coverage/
+.tmp*
+dist
+.turbo

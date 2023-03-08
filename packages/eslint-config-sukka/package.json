@@ -1,0 +1,43 @@
+{
+  "name": "eslint-config-sukka",
+  "version": "2.0.0-beta.0",
+  "description": "ESLint config for Sukka projects",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@fastify/deepmerge": "^1.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "confusing-browser-globals": "^1.0.11",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "picocolors": "^1.0.0",
+    "prettier": "^2.8.2",
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "build": "node tools/generate-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SukkaW/eslint-config-sukka.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "sukka"
+  ],
+  "author": "Sukka <https://skk.moe>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SukkaW/eslint-config-sukka/issues"
+  },
+  "homepage": "https://github.com/SukkaW/eslint-config-sukka#readme",
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "dependencies": {
+    "@fluffyfox/eslint-plugin": "^0.1.0",
+    "eslint-plugin-sukka": "workspace:*"
+  }
+}
