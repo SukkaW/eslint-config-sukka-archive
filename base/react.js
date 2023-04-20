@@ -202,6 +202,9 @@ module.exports = {
     // Prevent problematic leaked values from being rendered
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/c42b624d0fb9ad647583a775ab9751091eec066f/docs/rules/jsx-no-leaked-render.md
     'react/jsx-no-leaked-render': 'off',
+    // To prevent potential unnecessary rerenders, and performance regressions
+    // https://github.com/jsx-eslint/eslint-plugin-react/blob/66b58dd4864678eb869a7bf434c72ff7ac530eb1/docs/rules/no-object-type-as-default-prop.md
+    'react/no-object-type-as-default-prop': 'warn',
 
     'class-methods-use-this': ['error', {
       exceptMethods: [
