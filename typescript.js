@@ -488,7 +488,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-enum-comparison': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'error',
     '@typescript-eslint/prefer-includes': 'error',
-    'prefer-string-starts-ends-with': 'error',
+    '@typescript-eslint/prefer-string-starts-ends-with': 'error',
     '@typescript-eslint/prefer-literal-enum-member': [
       'error',
       { allowBitwiseExpressions: true }
