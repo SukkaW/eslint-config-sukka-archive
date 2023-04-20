@@ -493,7 +493,7 @@ module.exports = {
       'error',
       { allowBitwiseExpressions: true }
     ],
-    '@typescript-eslint/prefer-nullish-coalescing': 'error',
+    '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/prefer-return-this-type': 'error',
     '@typescript-eslint/prefer-optional-chain': 'error',
     '@typescript-eslint/prefer-reduce-type-parameter': 'error',
