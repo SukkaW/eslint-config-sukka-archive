@@ -53,11 +53,12 @@ module.exports = {
     allowEmpty: true,
     allowWithDecorator: true
   }],
-  '@typescript-eslint/no-invalid-void-type': ['error', { allowInGenericTypeArguments: true, allowAsThisParameter: true }],
+  // Promise<void[]> gets flagged
+  '@typescript-eslint/no-invalid-void-type': ['off', { allowInGenericTypeArguments: true, allowAsThisParameter: true }],
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
   '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-  // Failed to detect "isCancelled" use case in useEffect
-  '@typescript-eslint/no-unnecessary-condition': 'off',
+  // Failed to detect "isCancelled" case in useEffect
+  '@typescript-eslint/no-unnecessary-condition': 'warn',
   '@typescript-eslint/no-unnecessary-type-arguments': 'error',
   '@typescript-eslint/no-unsafe-declaration-merging': 'error',
   '@typescript-eslint/no-unsafe-enum-comparison': 'error',

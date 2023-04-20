@@ -477,12 +477,12 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-invalid-void-type': [
-      'error',
+      'off',
       { allowInGenericTypeArguments: true, allowAsThisParameter: true }
     ],
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-    '@typescript-eslint/no-unnecessary-condition': 'off',
+    '@typescript-eslint/no-unnecessary-condition': 'warn',
     '@typescript-eslint/no-unnecessary-type-arguments': 'error',
     '@typescript-eslint/no-unsafe-declaration-merging': 'error',
     '@typescript-eslint/no-unsafe-enum-comparison': 'error',
