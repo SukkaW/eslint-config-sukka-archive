@@ -56,7 +56,8 @@ module.exports = {
   '@typescript-eslint/no-invalid-void-type': ['error', { allowInGenericTypeArguments: true, allowAsThisParameter: true }],
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
   '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-  '@typescript-eslint/no-unnecessary-condition': 'error',
+  // Failed to detect "isCancelled" use case in useEffect
+  '@typescript-eslint/no-unnecessary-condition': 'off',
   '@typescript-eslint/no-unnecessary-type-arguments': 'error',
   '@typescript-eslint/no-unsafe-declaration-merging': 'error',
   '@typescript-eslint/no-unsafe-enum-comparison': 'error',
