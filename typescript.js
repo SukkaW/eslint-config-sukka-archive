@@ -208,7 +208,7 @@ module.exports = {
     'array-bracket-newline': ['off', 'consistent'],
     'array-element-newline': ['off', { multiline: true, minItems: 5 }],
     'array-bracket-spacing': ['error', 'never'],
-    'block-spacing': ['error', 'always'],
+    'block-spacing': 'off',
     'brace-style': 'off',
     camelcase: 'off',
     'comma-dangle': 'off',
@@ -240,7 +240,7 @@ module.exports = {
     'function-paren-newline': ['error', 'consistent'],
     'implicit-arrow-linebreak': ['error', 'beside'],
     indent: 'off',
-    'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+    'key-spacing': 'off',
     'keyword-spacing': 'off',
     'linebreak-style': 'error',
     'lines-between-class-members': 'off',
@@ -440,14 +440,67 @@ module.exports = {
       { allowNumber: true, allowAny: true, allowBoolean: true }
     ],
     '@typescript-eslint/unbound-method': 'error',
-    '@typescript-eslint/prefer-includes': 'warn',
     '@typescript-eslint/consistent-type-imports': [
       'warn',
-      { prefer: 'type-imports', disallowTypeAnnotations: true }
+      {
+        prefer: 'type-imports',
+        disallowTypeAnnotations: true,
+        fixStyle: 'separate-type-imports'
+      }
     ],
     '@typescript-eslint/consistent-type-exports': 'warn',
     '@typescript-eslint/consistent-type-definitions': 'warn',
     '@typescript-eslint/prefer-ts-expect-error': 'warn',
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
+      {
+        multiline: { delimiter: 'comma', requireLast: false },
+        singleline: { delimiter: 'comma', requireLast: false }
+      }
+    ],
+    '@typescript-eslint/consistent-generic-constructors': [
+      'error',
+      'constructor'
+    ],
+    '@typescript-eslint/no-base-to-string': [
+      'error',
+      { ignoredTypeNames: ['Error', 'RegExp', 'URL', 'URLSearchParams'] }
+    ],
+    '@typescript-eslint/no-confusing-non-null-assertion': 'error',
+    '@typescript-eslint/no-dynamic-delete': 'warn',
+    '@typescript-eslint/no-extraneous-class': [
+      'error',
+      {
+        allowConstructorOnly: true,
+        allowEmpty: true,
+        allowWithDecorator: true
+      }
+    ],
+    '@typescript-eslint/no-invalid-void-type': [
+      'error',
+      { allowInGenericTypeArguments: true, allowAsThisParameter: true }
+    ],
+    '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
+    '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
+    '@typescript-eslint/no-unnecessary-condition': 'error',
+    '@typescript-eslint/no-unnecessary-type-arguments': 'error',
+    '@typescript-eslint/no-unsafe-declaration-merging': 'error',
+    '@typescript-eslint/no-unsafe-enum-comparison': 'error',
+    '@typescript-eslint/non-nullable-type-assertion-style': 'error',
+    '@typescript-eslint/prefer-includes': 'error',
+    'prefer-string-starts-ends-with': 'error',
+    '@typescript-eslint/prefer-literal-enum-member': [
+      'error',
+      { allowBitwiseExpressions: true }
+    ],
+    '@typescript-eslint/prefer-nullish-coalescing': 'error',
+    '@typescript-eslint/prefer-return-this-type': 'error',
+    '@typescript-eslint/prefer-optional-chain': 'error',
+    '@typescript-eslint/prefer-reduce-type-parameter': 'error',
+    '@typescript-eslint/unified-signatures': [
+      'error',
+      { ignoreDifferentlyNamedParameters: true }
+    ],
     '@fluffyfox/array/no-unneeded-flat-map': 'error',
     '@fluffyfox/array/prefer-from': 'error',
     '@fluffyfox/browser/no-set-html': 'off',
@@ -513,6 +566,7 @@ module.exports = {
     ],
     '@typescript-eslint/no-duplicate-imports': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
+    '@typescript-eslint/block-spacing': ['error', 'always'],
     '@typescript-eslint/brace-style': [
       'error',
       '1tbs',
@@ -525,6 +579,10 @@ module.exports = {
     ],
     '@typescript-eslint/func-call-spacing': ['error', 'never'],
     '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }],
+    '@typescript-eslint/key-spacing': [
+      'error',
+      { beforeColon: false, afterColon: true }
+    ],
     '@typescript-eslint/keyword-spacing': [
       'error',
       {

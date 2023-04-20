@@ -578,6 +578,7 @@ module.exports = {
     'react/hook-use-state': 'off',
     'react/iframe-missing-sandbox': 'warn',
     'react/jsx-no-leaked-render': 'off',
+    'react/no-object-type-as-default-prop': 'warn',
     'class-methods-use-this': [
       'error',
       {
