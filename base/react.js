@@ -6,6 +6,10 @@ module.exports = {
     'plugin:react-hooks/recommended'
   ],
   rules: {
+    'react-hooks/exhaustive-deps': ['warn', {
+      additionalHooks: '(useIsomorphicLayoutEffect|useSukkaManyOtherCustomEffectHookExample)'
+    }],
+
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': ['warn', {
       extensions: ['.jsx', '.tsx']
