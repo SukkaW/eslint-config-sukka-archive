@@ -442,6 +442,13 @@ module.exports = {
     '@fluffyfox/prefer-early-return': ['error', { maximumStatements: 10 }],
     '@fluffyfox/prefer-fetch': 'error',
     '@fluffyfox/prefer-timer-id': 'warn',
+    'react-hooks/exhaustive-deps': [
+      'warn',
+      {
+        additionalHooks:
+          '(useIsomorphicLayoutEffect|useSukkaManyOtherCustomEffectHookExample)'
+      }
+    ],
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.tsx'] }],
     'react/prop-types': 'off',
