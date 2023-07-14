@@ -64,7 +64,7 @@ module.exports = {
     'no-useless-concat': 'error',
     'no-useless-escape': 'error',
     'no-useless-return': 'error',
-    'no-void': 'error',
+    'no-void': ['error', { allowAsStatement: true }],
     'no-with': 'error',
     'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
     'prefer-object-has-own': 'error',

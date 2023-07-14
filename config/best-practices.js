@@ -242,7 +242,8 @@ module.exports = {
 
   // disallow use of void operator
   // https://eslint.org/docs/rules/no-void
-  'no-void': 'error',
+  // https://typescript-eslint.io/rules/no-floating-promises/#ignorevoid
+  'no-void': ['error', { 'allowAsStatement': true }],
 
   // disallow use of the with statement
   'no-with': 'error',
