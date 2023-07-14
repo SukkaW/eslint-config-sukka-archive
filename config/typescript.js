@@ -64,11 +64,13 @@ module.exports = {
   '@typescript-eslint/no-unsafe-enum-comparison': 'error',
   '@typescript-eslint/non-nullable-type-assertion-style': 'error',
   '@typescript-eslint/prefer-includes': 'error',
-  '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+  '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
   '@typescript-eslint/prefer-literal-enum-member': ['error', { allowBitwiseExpressions: true }],
   '@typescript-eslint/prefer-nullish-coalescing': 'off',
   '@typescript-eslint/prefer-return-this-type': 'error',
   '@typescript-eslint/prefer-optional-chain': 'error',
   '@typescript-eslint/prefer-reduce-type-parameter': 'error',
-  '@typescript-eslint/unified-signatures': ['error', { ignoreDifferentlyNamedParameters: true }]
+  '@typescript-eslint/unified-signatures': ['error', { ignoreDifferentlyNamedParameters: true }],
+  '@typescript-eslint/prefer-for-of': 'off',
+  '@typescript-eslint/prefer-function-type': 'off'
 };
