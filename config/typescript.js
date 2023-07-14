@@ -72,5 +72,6 @@ module.exports = {
   '@typescript-eslint/prefer-reduce-type-parameter': 'error',
   '@typescript-eslint/unified-signatures': ['error', { ignoreDifferentlyNamedParameters: true }],
   '@typescript-eslint/prefer-for-of': 'off',
-  '@typescript-eslint/prefer-function-type': 'off'
+  '@typescript-eslint/prefer-function-type': 'off',
+  '@typescript-eslint/consistent-indexed-object-style': 'off'
 };
