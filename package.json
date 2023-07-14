@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sukka",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "ESLint config for Sukka projects",
   "files": [
     "rules",
@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/SukkaW/eslint-config-sukka#readme",
   "engines": {
-    "node": ">= 8.3.0"
+    "node": ">= 14.0.0"
   },
   "dependencies": {
     "@fluffyfox/eslint-plugin": "^0.1.0"
