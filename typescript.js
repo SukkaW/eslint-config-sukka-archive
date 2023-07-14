@@ -8,6 +8,9 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:@typescript-eslint/stylistic',
+    'plugin:@typescript-eslint/stylistic-type-checked',
     'plugin:import/recommended',
     'plugin:import/typescript'
   ],
@@ -488,7 +491,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-enum-comparison': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'error',
     '@typescript-eslint/prefer-includes': 'error',
-    '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+    '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
     '@typescript-eslint/prefer-literal-enum-member': [
       'error',
       { allowBitwiseExpressions: true }
@@ -501,6 +504,8 @@ module.exports = {
       'error',
       { ignoreDifferentlyNamedParameters: true }
     ],
+    '@typescript-eslint/prefer-for-of': 'off',
+    '@typescript-eslint/prefer-function-type': 'off',
     '@fluffyfox/array/no-unneeded-flat-map': 'error',
     '@fluffyfox/array/prefer-from': 'error',
     '@fluffyfox/browser/no-set-html': 'off',
