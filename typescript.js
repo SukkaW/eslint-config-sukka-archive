@@ -507,6 +507,7 @@ module.exports = {
     '@typescript-eslint/prefer-for-of': 'off',
     '@typescript-eslint/prefer-function-type': 'off',
     '@typescript-eslint/consistent-indexed-object-style': 'off',
+    '@typescript-eslint/ban-types': 'off',
     '@fluffyfox/array/no-unneeded-flat-map': 'error',
     '@fluffyfox/array/prefer-from': 'error',
     '@fluffyfox/browser/no-set-html': 'off',

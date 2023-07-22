@@ -5,10 +5,10 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:node/recommended',
+    'plugin:n/recommended',
     'plugin:import/recommended'
   ],
-  plugins: ['node', '@fluffyfox'],
+  plugins: ['n', '@fluffyfox'],
   rules: {
     'accessor-pairs': 'off',
     'array-callback-return': ['error', { allowImplicit: true }],
@@ -452,7 +452,7 @@ module.exports = {
     'no-process-exit': 'off',
     'no-restricted-modules': 'off',
     'no-sync': 'off',
-    'node/no-deprecated-api': [
+    'n/no-deprecated-api': [
       'error',
       { ignoreModuleItems: ['url.parse', 'url.resolve'] }
     ]
