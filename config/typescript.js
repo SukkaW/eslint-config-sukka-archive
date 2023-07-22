@@ -73,5 +73,7 @@ module.exports = {
   '@typescript-eslint/unified-signatures': ['error', { ignoreDifferentlyNamedParameters: true }],
   '@typescript-eslint/prefer-for-of': 'off',
   '@typescript-eslint/prefer-function-type': 'off',
-  '@typescript-eslint/consistent-indexed-object-style': 'off'
+  '@typescript-eslint/consistent-indexed-object-style': 'off',
+  // the maintainers of @typescript-eslint DOESN'T KNOW ANYTHING about TypeScript AT ALL
+  '@typescript-eslint/ban-types': 'off'
 };
