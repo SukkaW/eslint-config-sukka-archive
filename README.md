@@ -18,7 +18,7 @@ Add following snippets to your ESLint configuration files.
 ### Node.js Project
 
 ```bash
-$ npm i -D eslint-plugin-node eslint-plugin-import@npm:eslint-plugin-i@latest
+$ npm i -D eslint-plugin-n eslint-plugin-import@npm:eslint-plugin-i@latest
 ```
 
 ```json

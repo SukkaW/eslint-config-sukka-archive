@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:node/recommended', 'plugin:import/recommended'],
-  plugins: ['node', '@fluffyfox'],
+  extends: ['eslint:recommended', 'plugin:n/recommended', 'plugin:import/recommended'],
+  plugins: ['n', '@fluffyfox'],
   rules: {
     // Strict Mode
     strict: 'warn',
@@ -32,7 +32,7 @@ module.exports = {
     'no-sync': 'off',
 
     // I still use them
-    'node/no-deprecated-api': ['error', {
+    'n/no-deprecated-api': ['error', {
       ignoreModuleItems: ['url.parse', 'url.resolve']
     }]
   },
