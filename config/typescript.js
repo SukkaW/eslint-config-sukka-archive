@@ -75,5 +75,7 @@ module.exports = {
   '@typescript-eslint/prefer-function-type': 'off',
   '@typescript-eslint/consistent-indexed-object-style': 'off',
   // the maintainers of @typescript-eslint DOESN'T KNOW ANYTHING about TypeScript AT ALL
-  '@typescript-eslint/ban-types': 'off'
+  '@typescript-eslint/ban-types': 'off',
+  '@typescript-eslint/no-unsafe-assignment': 'off',
+  '@typescript-eslint/no-explicit-any': 'warn'
 };
