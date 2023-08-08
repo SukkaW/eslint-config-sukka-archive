@@ -184,6 +184,8 @@ module.exports = {
         props: ['href']
       }
     ]],
+    'react/jsx-key': ['warn', { checkFragmentShorthand: true, checkKeyMustBeforeSpread: true, warnOnDuplicates: true }],
+    'react/jsx-uses-vars': 'error',
     // Disallow unnecessary fragments
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md
     'react/jsx-no-useless-fragment': 'error',
