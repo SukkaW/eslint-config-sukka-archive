@@ -402,6 +402,16 @@ module.exports = {
       'top'
     ],
     'no-undef-init': 'error',
+    '@typescript-eslint/ban-ts-comment': [
+      'error',
+      {
+        'ts-expect-error': 'allow-with-description',
+        'ts-ignore': true,
+        'ts-nocheck': true,
+        'ts-check': false,
+        minimumDescriptionLength: 5
+      }
+    ],
     '@typescript-eslint/naming-convention': [
       'warn',
       {
@@ -447,11 +457,14 @@ module.exports = {
       'warn',
       {
         prefer: 'type-imports',
-        disallowTypeAnnotations: true,
+        disallowTypeAnnotations: false,
         fixStyle: 'separate-type-imports'
       }
     ],
-    '@typescript-eslint/consistent-type-exports': 'warn',
+    '@typescript-eslint/consistent-type-exports': [
+      'warn',
+      { fixMixedExportsWithInlineTypeSpecifier: true }
+    ],
     '@typescript-eslint/consistent-type-definitions': 'warn',
     '@typescript-eslint/prefer-ts-expect-error': 'warn',
     '@typescript-eslint/member-delimiter-style': [
@@ -472,7 +485,7 @@ module.exports = {
     '@typescript-eslint/no-confusing-non-null-assertion': 'error',
     '@typescript-eslint/no-dynamic-delete': 'warn',
     '@typescript-eslint/no-extraneous-class': [
-      'error',
+      'warn',
       {
         allowConstructorOnly: true,
         allowEmpty: true,
@@ -507,9 +520,76 @@ module.exports = {
     '@typescript-eslint/prefer-for-of': 'off',
     '@typescript-eslint/prefer-function-type': 'off',
     '@typescript-eslint/consistent-indexed-object-style': 'off',
-    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/prefer-enum-initializers': 'warn',
+    '@typescript-eslint/no-duplicate-enum-values': 'error',
+    '@typescript-eslint/no-extra-non-null-assertion': 'error',
+    '@typescript-eslint/no-meaningless-void-operator': 'warn',
+    '@typescript-eslint/no-unnecessary-qualifier': 'warn',
+    '@typescript-eslint/array-type': ['warn', { default: 'array-simple' }],
+    '@typescript-eslint/no-restricted-imports': [
+      'error',
+      {
+        paths: [
+          {
+            name: 'date-fns',
+            message: 'Please use date-fns/{submodule} instead.',
+            allowTypeImports: true
+          },
+          {
+            name: 'date-fns/esm',
+            message: 'Please use date-fns/{submodule} instead.'
+          },
+          {
+            name: 'idb/with-async-ittr-cjs',
+            message: 'Please use idb/with-async-ittr instead.'
+          },
+          {
+            name: 'async-call-rpc',
+            message: 'Please use async-call-rpc/full instead.',
+            allowTypeImports: true
+          },
+          {
+            name: 'lodash-es',
+            message: 'Avoid using type unsafe methods.',
+            importNames: ['get']
+          }
+        ]
+      }
+    ],
+    '@typescript-eslint/ban-types': [
+      'error',
+      {
+        types: {
+          '{}': false,
+          FC: {
+            message:
+              'To declare a component, you don\'t have to use FC to annotate it. To type something that accepts/is a React Component, use ComponentType<T>.',
+            fixWith: 'ComponentType'
+          },
+          ReactElement: {
+            message:
+              'In most cases, you want ReactNode. Only ignore this rule when you want to use cloneElement.',
+            fixWith: 'ReactNode'
+          },
+          'React.FC': {
+            message:
+              'To declare a component, you don\'t have to use React.FC to annotate it. To type something that accepts/is a React Component, use React.ComponentType<T>.',
+            fixWith: 'React.ComponentType'
+          },
+          'React.ReactElement': {
+            message:
+              'In most cases, you want React.ReactNode. Only ignore this rule when you want to use cloneElement.',
+            fixWith: 'React.ReactNode'
+          }
+        },
+        extendDefaults: true
+      }
+    ],
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-loop-func': 'error',
+    '@typescript-eslint/no-redundant-type-constituents': 'off',
+    '@typescript-eslint/no-floating-promises': 'off',
     '@fluffyfox/array/no-unneeded-flat-map': 'error',
     '@fluffyfox/array/prefer-from': 'error',
     '@fluffyfox/browser/no-set-html': 'off',
@@ -542,7 +622,6 @@ module.exports = {
     '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
     '@typescript-eslint/no-implied-eval': 'error',
     '@typescript-eslint/no-invalid-this': 'off',
-    '@typescript-eslint/no-loop-func': 'error',
     '@typescript-eslint/no-unused-expressions': [
       'error',
       {

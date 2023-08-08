@@ -578,6 +578,15 @@ module.exports = {
         { name: 'NextLink', props: ['href'] }
       ]
     ],
+    'react/jsx-key': [
+      'warn',
+      {
+        checkFragmentShorthand: true,
+        checkKeyMustBeforeSpread: true,
+        warnOnDuplicates: true
+      }
+    ],
+    'react/jsx-uses-vars': 'error',
     'react/jsx-no-useless-fragment': 'error',
     'react/jsx-no-constructed-context-values': 'error',
     'react/no-unstable-nested-components': 'error',
