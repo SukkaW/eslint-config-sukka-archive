@@ -298,7 +298,7 @@ module.exports = {
     'no-multi-assign': ['error'],
     'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
     'no-negated-condition': 'off',
-    'no-nested-ternary': 'error',
+    'no-nested-ternary': 'warn',
     'no-new-object': 'error',
     'no-ternary': 'off',
     'no-trailing-spaces': 'error',
