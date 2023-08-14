@@ -445,9 +445,6 @@ module.exports = {
       { checksVoidReturn: false }
     ],
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
-    '@typescript-eslint/no-unsafe-call': 'off',
-    '@typescript-eslint/no-unsafe-member-access': 'off',
-    '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/restrict-template-expressions': [
       'error',
       { allowNumber: true, allowAny: true, allowBoolean: true }
@@ -586,10 +583,14 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/no-loop-func': 'error',
     '@typescript-eslint/no-redundant-type-constituents': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unsafe-return': 'error',
     '@fluffyfox/array/no-unneeded-flat-map': 'error',
     '@fluffyfox/array/prefer-from': 'error',
     '@fluffyfox/browser/no-set-html': 'off',
