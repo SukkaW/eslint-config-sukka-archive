@@ -41,9 +41,6 @@ module.exports = {
   '@typescript-eslint/no-for-in-array': 'error',
   '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
   '@typescript-eslint/no-unnecessary-type-assertion': 'error',
-  '@typescript-eslint/no-unsafe-call': 'off',
-  '@typescript-eslint/no-unsafe-member-access': 'off',
-  '@typescript-eslint/no-unsafe-return': 'off',
   '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true, allowAny: true, allowBoolean: true }],
   '@typescript-eslint/unbound-method': 'error',
   '@typescript-eslint/consistent-type-imports': ['warn', { prefer: 'type-imports', disallowTypeAnnotations: false, fixStyle: 'separate-type-imports' }],
@@ -129,9 +126,13 @@ module.exports = {
       extendDefaults: true
     }
   ],
-  '@typescript-eslint/no-unsafe-assignment': 'off',
+  '@typescript-eslint/no-unsafe-assignment': 'off', // bans a = any
+  '@typescript-eslint/no-unsafe-argument': 'off', // bans call(any)
   '@typescript-eslint/no-explicit-any': 'warn',
   '@typescript-eslint/no-loop-func': 'warn',
   '@typescript-eslint/no-redundant-type-constituents': 'off',
-  '@typescript-eslint/no-floating-promises': 'off'
+  '@typescript-eslint/no-floating-promises': 'off',
+  '@typescript-eslint/no-unsafe-call': 'off', // bans any()
+  '@typescript-eslint/no-unsafe-member-access': 'off', // bans a = any.prop
+  '@typescript-eslint/no-unsafe-return': 'error' // bans return any
 };
