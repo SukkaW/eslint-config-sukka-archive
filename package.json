@@ -46,5 +46,12 @@
   },
   "dependencies": {
     "@fluffyfox/eslint-plugin": "^0.1.0"
+  },
+  "overrides": {
+    "array-includes": "npm:@nolyfill/array-includes@latest",
+    "array.prototype.flat": "npm:@nolyfill/array.prototype.flat@latest",
+    "array.prototype.flatmap": "npm:@nolyfill/array.prototype.flatmap@latest",
+    "has": "npm:@nolyfill/has@latest",
+    "object.values": "npm:@nolyfill/object.values@latest"
   }
 }
