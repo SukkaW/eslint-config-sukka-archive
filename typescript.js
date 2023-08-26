@@ -590,7 +590,7 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-unsafe-call': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',
-    '@typescript-eslint/no-unsafe-return': 'error',
+    '@typescript-eslint/no-unsafe-return': 'off',
     '@fluffyfox/array/no-unneeded-flat-map': 'error',
     '@fluffyfox/array/prefer-from': 'error',
     '@fluffyfox/browser/no-set-html': 'off',
