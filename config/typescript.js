@@ -99,7 +99,9 @@ module.exports = {
       ]
     }
   ],
+
   // the maintainers of @typescript-eslint DOESN'T KNOW ANYTHING about TypeScript AT ALL
+  // and basically @typescript-eslint is a joke anyway
   '@typescript-eslint/ban-types': [
     'error',
     {
@@ -134,5 +136,5 @@ module.exports = {
   '@typescript-eslint/no-floating-promises': 'off',
   '@typescript-eslint/no-unsafe-call': 'off', // bans any()
   '@typescript-eslint/no-unsafe-member-access': 'off', // bans a = any.prop
-  '@typescript-eslint/no-unsafe-return': 'error' // bans return any
+  '@typescript-eslint/no-unsafe-return': 'off' // bans return any
 };
