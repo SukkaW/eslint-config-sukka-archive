@@ -8,6 +8,6 @@ module.exports = {
   // If you have a good reason to do this, please ignore this error and provide a comment about why this is type safe.
   '@fluffyfox/type/no-force-cast-via-top-type': 'error',
   '@fluffyfox/type/no-wrapper-type-reference': 'error',
-  '@fluffyfox/no-default-error': 'warn',
+  '@fluffyfox/no-default-error': 'off', // disable since this is way too slow
   '@fluffyfox/no-unsafe-date': 'warn'
 };
