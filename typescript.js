@@ -617,7 +617,7 @@ module.exports = {
     '@fluffyfox/string/no-unneeded-to-string': 'error',
     '@fluffyfox/type/no-force-cast-via-top-type': 'error',
     '@fluffyfox/type/no-wrapper-type-reference': 'error',
-    '@fluffyfox/no-default-error': 'warn',
+    '@fluffyfox/no-default-error': 'off',
     '@fluffyfox/no-unsafe-date': 'warn',
     '@typescript-eslint/default-param-last': 'error',
     '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
